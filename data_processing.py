@@ -81,7 +81,7 @@ print(f"Total data points: {len(all_data_points)}")
 
 print(all_data_points[1082])
 
-import json
+import jso
 
 # Export all_data_points to a JSON file
 with open('all_data_points.json', 'w') as f:

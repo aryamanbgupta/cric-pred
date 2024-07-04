@@ -4,6 +4,7 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Embedding, Dense, Concatenate, Flatten
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, LabelEncoder
+import pickle
 
 # Load the data
 data = np.load('cricket_training_data.npy', allow_pickle=True)
@@ -107,6 +108,14 @@ test_loss, test_accuracy = model.evaluate(
 )
 
 model.save('pred_v1.h5')
+encoders = {
+    'batter': le_batter,
+    'bowler': le_bowler
+}
+
+with open('label_encoders.pkl', 'wb') as f:
+    pickle.dump(encoders, f)
+    
 print(f"Test accuracy: {test_accuracy:.4f}")
 
 # Function to predict
