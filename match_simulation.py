@@ -1,13 +1,17 @@
 import numpy as np
 from tensorflow.keras.models import load_model
 import pickle
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+import csv
+from collections import defaultdict
 
 class CricketSimulation:
-    def __init__(self, model_path, num_overs=20):
+    def __init__(self, model_path, label_encoder_path,names_csv_path, num_overs=20):
         self.model = load_model(model_path)
         self.num_overs = num_overs
         self.reset_match()
         self.load_label_encoders(label_encoder_path)
+        self.load_player_names(names_csv_path)
     
     def load_label_encoders(self, label_encoder_path):
         if label_encoder_path:
@@ -29,6 +33,15 @@ class CricketSimulation:
         self.current_batter = None
         self.current_bowler = None
 
+    def outcome_to_string(self, outcome):
+        if outcome == 8:
+            return "Wicket"
+        elif outcome == 7:
+            return "7+ runs"
+        else:
+            return f"{outcome} run{'s' if outcome != 1 else ''}"
+
+
     def safe_transform(self, encoder, values):
         try:
             return encoder.transform(values)
@@ -36,6 +49,8 @@ class CricketSimulation:
             return np.array([encoder.transform([value])[0] if value in encoder.classes_ else -1 for value in values])
 
     def initialize_teams(self, team1, team2):
+        self.original_team1 = team1
+        self.original_team2 = team2
         self.batting_team = self.safe_transform(self.le_batter, team1)
         self.bowling_team = self.safe_transform(self.le_bowler, team2)
         self.current_batter = self.batting_team[0]
@@ -97,6 +112,27 @@ class CricketSimulation:
         ball_input = self.generate_ball_input()
         outcome = self.predict_ball_outcome(ball_input)
         self.update_match_state(outcome)
+
+        # Print ball outcome
+        try:
+            if self.inning == 1:
+                batter_id = self.original_team1[self.batting_team.tolist().index(self.current_batter)]
+                bowler_id = self.original_team2[self.bowling_team.tolist().index(self.current_bowler)]
+            else:
+                batter_id = self.original_team2[self.batting_team.tolist().index(self.current_batter)]
+                bowler_id = self.original_team1[self.bowling_team.tolist().index(self.current_bowler)]
+
+            batter_name = self.get_player_name(batter_id)
+            bowler_name = self.get_player_name(bowler_id)
+
+            print(f"Ball {self.balls}: {batter_name} faces {bowler_name}")
+            print(f"Outcome: {self.outcome_to_string(outcome)} | Score: {self.score}/{self.wickets}")
+        except ValueError as e:
+            print(f"Error: {e}")
+            print(f"Current batter: {self.current_batter}, Current bowler: {self.current_bowler}")
+            print(f"Batting team: {self.batting_team}")
+            print(f"Bowling team: {self.bowling_team}")
+        
         return outcome
 
     def simulate_over(self):
@@ -112,10 +148,12 @@ class CricketSimulation:
     def simulate_innings(self):
         innings_outcomes = []
         for _ in range(self.num_overs):
+            #print(f"\nOver {self.over + 1}:")
             if self.wickets < 10:
                 over_outcomes = self.simulate_over()
                 innings_outcomes.append(over_outcomes)
             else:
+                print("All out!")
                 break
         return innings_outcomes
 
@@ -123,7 +161,7 @@ class CricketSimulation:
         self.reset_match()
         self.initialize_teams(team1, team2)
         
-        # First innings
+        print("First Innings:")
         first_innings = self.simulate_innings()
         first_innings_score = self.score
 
@@ -132,28 +170,67 @@ class CricketSimulation:
         self.score = 0
         self.wickets = 0
         self.balls = 0
-        self.batting_team, self.bowling_team = self.bowling_team, self.batting_team
+        self.batting_team, self.bowling_team = self.safe_transform(self.le_batter, team2), self.safe_transform(self.le_bowler, team1)
         self.current_batter = self.batting_team[0]
         self.current_bowler = self.bowling_team[0]
 
-        # Second innings
+        print("\nSecond Innings:")
         second_innings = self.simulate_innings()
+        second_innings_score = self.score
 
-        return first_innings, second_innings, first_innings_score, self.score
+        return first_innings, second_innings, first_innings_score, second_innings_score
+
+    def load_player_names(self, csv_file):
+        self.player_names = defaultdict(set)
+        with open(csv_file, 'r') as f:
+            reader = csv.reader(f)
+            next(reader)  # Skip header
+            for row in reader:
+                identifier, name = row
+                self.player_names[identifier].add(name)
+        
+        # Choose the longest name for each player as the "full name"
+        self.player_full_names = {id: max(names, key=len) for id, names in self.player_names.items()}
+
+    def get_player_name(self, identifier):
+        return self.player_full_names.get(identifier, identifier)
+
+    def print_debug_info(self):
+        print(f"Inning: {self.inning}")
+        print(f"Current batter: {self.current_batter}")
+        print(f"Current bowler: {self.current_bowler}")
+        print(f"Batting team: {self.batting_team}")
+        print(f"Bowling team: {self.bowling_team}")
+        if self.inning == 1:
+            print(f"Original team1: {self.original_team1}")
+            print(f"Original team2: {self.original_team2}")
+        else:
+            print(f"Original team1 (now bowling): {self.original_team1}")
+            print(f"Original team2 (now batting): {self.original_team2}")
 
 # Usage example
 if __name__ == "__main__":
     model_path = "pred_v1.h5"
     label_encoder_path = "label_encoders.pkl"
-    sim = CricketSimulation(model_path)
+    names_csv_path = "names.csv"
+    sim = CricketSimulation(model_path, label_encoder_path, names_csv_path)
     
-    team1 = ["7fca84b7", "09a9d073", "3241e3fd", "650d5e49", "bbd41817", "d014d5ac", "c5aef772", "3feda4fa", "4d7f517e", "b0946605", "97bdec3d"]  # Replace with actual player IDs
-    team2 = ["3d284ca3", "99b75528", "bb351c23", "abb83e27", "4ae1755b", "50c6bc2b", "e94915e6", "5574750c", "249d60c9", "8d92a2c3", "8db7f47f"]  # Replace with actual player IDs
+    team1 = ["7fca84b7", "09a9d073", "3241e3fd", "650d5e49", "bbd41817", "d014d5ac", "c5aef772", "3feda4fa", "4d7f517e", "b0946605", "97bdec3d"]
+    team2 = ["3d284ca3", "99b75528", "bb351c23", "abb83e27", "4ae1755b", "50c6bc2b", "e94915e6", "5574750c", "249d60c9", "8d92a2c3", "8db7f47f"]
+    
+    # Print team lineups
+    print("Team 1:")
+    for player in team1:
+        print(sim.get_player_name(player))
+    print("\nTeam 2:")
+    for player in team2:
+        print(sim.get_player_name(player))
     
     first_innings, second_innings, team1_score, team2_score = sim.simulate_match(team1, team2)
     
-    print(f"Team 1 Score: {team1_score}")
-    print(f"Team 2 Score: {team2_score}")
+    print("\nMatch Result:")
+    print(f"Team 1: {team1_score}")
+    print(f"Team 2: {team2_score}")
     if team1_score > team2_score:
         print("Team 1 wins!")
     elif team2_score > team1_score:
