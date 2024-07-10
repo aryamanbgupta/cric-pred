@@ -2,6 +2,9 @@ import json
 import numpy as np
 from pathlib import Path
 
+with open('ground_average_scores.json', 'r') as f:
+    ground_average_scores = json.load(f)
+
 def get_batting_position(inning, batter):
     batters_order = []
     for over in inning['overs']:
@@ -15,7 +18,9 @@ def parse_match_data(json_data):
     
     # Extract player IDs from the registry
     player_registry = data['info']['registry']['people']
-    
+    ground = data['info']['venue']
+    default_target = ground_average_scores.get(ground, 160)  # Use 160 as fallback if ground not found
+
     all_balls = []
     
     for inning_idx, inning in enumerate(data['innings'], 1):
@@ -23,6 +28,11 @@ def parse_match_data(json_data):
         wickets = 0
         balls = 0
         
+        if inning_idx == 1:
+            target = default_target
+        else:
+            target = first_innings_score if first_innings_score is not None else default_target
+
         for over in inning['overs']:
             for delivery in over['deliveries']:
                 batter = delivery['batter']
@@ -33,8 +43,11 @@ def parse_match_data(json_data):
                 batter_id = player_registry[batter]
                 bowler_id = player_registry[bowler]
                 
-                if 'wicket' in delivery:
-                    wickets += 1
+                # Check for extras
+                is_extra = 'extras' in delivery
+                extra_type = delivery.get('extras', {}).keys()
+                is_wide_or_noball = 'wides' in extra_type or 'noballs' in extra_type
+                is_noball = 'noballs' in extra_type
                 
                 ball_input = [
                     inning_idx,
@@ -44,14 +57,25 @@ def parse_match_data(json_data):
                     batter_id,
                     bowler_id,
                     get_batting_position(inning, batter),
-                    runs
+                    runs,
+                    int(is_noball),  # 1 if extra, 0 if not
+                    int(is_wide_or_noball),  # 1 if wide or no-ball, 0 if not
+                    target
                 ]
                 
                 all_balls.append(ball_input)
                 
+                if 'wicket' in delivery:
+                    wickets += 1
                 score += runs
-                balls += 1
-    
+                
+                # Only increment balls if it's not a wide or no-ball
+                if not is_wide_or_noball:
+                    balls += 1
+             # Store the first innings score
+            if inning_idx == 1:
+                first_innings_score = score
+
     return all_balls, set(player_registry.values())
 
 def process_folder(folder_path):
@@ -90,4 +114,3 @@ print(training_data[:5])
 
 # If you want to save the training data
 np.save('cricket_training_data.npy', training_data)
-
