@@ -36,11 +36,13 @@ def parse_match_data(json_data):
         for over in inning['overs']:
             for delivery in over['deliveries']:
                 batter = delivery['batter']
+                non_striker = delivery['non_striker']
                 bowler = delivery['bowler']
                 runs = delivery['runs']['total']
                 
                 # Use hex IDs instead of integer IDs
                 batter_id = player_registry[batter]
+                non_striker_id = player_registry[non_striker]
                 bowler_id = player_registry[bowler]
                 
                 # Check for extras
@@ -55,6 +57,7 @@ def parse_match_data(json_data):
                     wickets,
                     balls,
                     batter_id,
+                    non_striker_id,
                     bowler_id,
                     get_batting_position(inning, batter),
                     runs,

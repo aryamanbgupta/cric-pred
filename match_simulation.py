@@ -6,7 +6,7 @@ import csv
 from collections import defaultdict
 
 class CricketSimulation:
-    def __init__(self, model_path, label_encoder_path,names_csv_path, num_overs=20):
+    def __init__(self, model_path, label_encoder_path, names_csv_path, num_overs=20):
         self.model = load_model(model_path)
         self.num_overs = num_overs
         self.reset_match()
@@ -32,6 +32,8 @@ class CricketSimulation:
         self.bowling_team = []
         self.current_batter = None
         self.current_bowler = None
+        self.bowler_overs = {}
+        self.last_bowler = None
 
     def outcome_to_string(self, outcome):
         if outcome == 8:
@@ -40,7 +42,6 @@ class CricketSimulation:
             return "7+ runs"
         else:
             return f"{outcome} run{'s' if outcome != 1 else ''}"
-
 
     def safe_transform(self, encoder, values):
         try:
@@ -54,7 +55,8 @@ class CricketSimulation:
         self.batting_team = self.safe_transform(self.le_batter, team1)
         self.bowling_team = self.safe_transform(self.le_bowler, team2)
         self.current_batter = self.batting_team[0]
-        self.current_bowler = self.bowling_team[0]
+        self.current_bowler = self.get_next_bowler()
+        self.bowler_overs = {bowler: 0 for bowler in self.bowling_team if bowler != -1}
 
         # Print warnings for unknown players
         unknown_batters = [team1[i] for i, val in enumerate(self.batting_team) if val == -1]
@@ -90,8 +92,27 @@ class CricketSimulation:
         return available_batters[self.wickets] if self.wickets < len(available_batters) else -1
 
     def get_next_bowler(self):
-        available_bowlers = [b for b in self.bowling_team if b != -1]
-        return np.random.choice(available_bowlers) if available_bowlers else -1
+        available_bowlers = [
+            b for b in self.bowling_team 
+            if b != -1 
+            and b != self.last_bowler 
+            and self.bowler_overs.get(b, 0) < 4
+        ]
+        
+        if not available_bowlers:
+            print("Warning: No eligible bowlers available. Resetting to least used bowler.")
+            available_bowlers = [
+                b for b in self.bowling_team 
+                if b != -1 
+                and self.bowler_overs.get(b, 0) < 4
+            ]
+        
+        if not available_bowlers:
+            print("Error: No bowlers available. This shouldn't happen in a normal match.")
+            return self.current_bowler
+
+        next_bowler = np.random.choice(available_bowlers)
+        return next_bowler
 
     def update_match_state(self, outcome):
         if outcome == 8:  # Wicket
@@ -101,12 +122,6 @@ class CricketSimulation:
             self.score += outcome
 
         self.balls += 1
-        
-        # add check to ensure that its not an extra
-        if self.balls % 6 == 0:
-            self.current_bowler = self.get_next_bowler()
-
-    
 
     def simulate_ball(self):
         ball_input = self.generate_ball_input()
@@ -137,18 +152,27 @@ class CricketSimulation:
 
     def simulate_over(self):
         over_outcomes = []
-        for _ in range(6):
+        initial_bowler = self.current_bowler
+        for ball in range(6):
             if self.wickets < 10:
                 outcome = self.simulate_ball()
                 over_outcomes.append(outcome)
             else:
                 break
+        
+        self.bowler_overs[initial_bowler] = self.bowler_overs.get(initial_bowler, 0) + 1
+        self.last_bowler = initial_bowler
+        self.current_bowler = self.get_next_bowler()
+        
+        print(f"Over completed by {self.get_player_name(self.le_bowler.inverse_transform([initial_bowler])[0])}")
+        print(f"Bowler overs: {', '.join([f'{self.get_player_name(self.le_bowler.inverse_transform([k])[0])}: {v}' for k, v in self.bowler_overs.items()])}")
+        
         return over_outcomes
 
     def simulate_innings(self):
         innings_outcomes = []
-        for _ in range(self.num_overs):
-            #print(f"\nOver {self.over + 1}:")
+        for over in range(self.num_overs):
+            print(f"\nOver {over + 1}:")
             if self.wickets < 10:
                 over_outcomes = self.simulate_over()
                 innings_outcomes.append(over_outcomes)
@@ -172,7 +196,9 @@ class CricketSimulation:
         self.balls = 0
         self.batting_team, self.bowling_team = self.safe_transform(self.le_batter, team2), self.safe_transform(self.le_bowler, team1)
         self.current_batter = self.batting_team[0]
-        self.current_bowler = self.bowling_team[0]
+        self.current_bowler = self.get_next_bowler()
+        self.bowler_overs = {bowler: 0 for bowler in self.bowling_team if bowler != -1}
+        self.last_bowler = None
 
         print("\nSecond Innings:")
         second_innings = self.simulate_innings()
