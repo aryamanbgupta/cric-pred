@@ -158,11 +158,11 @@ def process_names_csv(input_file, output_file, tally_file):
         print(f"{style}: {count}")
 
 # Main execution
-input_file = 'test_names.csv'
+input_file = 'names_v2.csv'
 output_file = 'players_info.csv'
 tally_file = 'bowling_style_tally.csv'
 
-clear_cache()
+#clear_cache()
 start_time = time.time()
 process_names_csv(input_file, output_file, tally_file)
 end_time = time.time()
