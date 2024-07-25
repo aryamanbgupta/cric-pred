@@ -1,4 +1,5 @@
 cricket_training_data.npy
+cricket_sequences.npy
 myenv/
 .vscode
 player_cache/
