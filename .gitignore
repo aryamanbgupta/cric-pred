@@ -3,3 +3,4 @@ cricket_sequences.npy
 myenv/
 .vscode
 player_cache/
+*.pyc

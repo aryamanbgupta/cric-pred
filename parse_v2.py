@@ -2,10 +2,10 @@ import json
 import numpy as np
 from pathlib import Path
 import pickle
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+#from tensorflow.keras.preprocessing.sequence import pad_sequences
 import csv
 import pandas as pd
-from collections import defaultdict
+from collections import defaultdict, Counter
 from datetime import datetime
 
 # Load player info
@@ -91,7 +91,12 @@ def parse_match_data(json_data):
                 extra_type = delivery.get('extras', {}).keys()
                 is_wide_or_noball = 'wides' in extra_type or 'noballs' in extra_type
                 is_noball = 'noballs' in extra_type
-                is_wicket = 'wicket' in delivery
+                is_wicket = 'wickets' in delivery
+
+                if is_wicket:
+                    ball_outcome = -1
+                else:
+                    ball_outcome = runs
                 
                 ball_input = [
                     inning_idx,
@@ -113,7 +118,7 @@ def parse_match_data(json_data):
                     int(is_noball),
                     int(is_wide_or_noball),
                     target,
-                    'W' if is_wicket else runs
+                    ball_outcome
                 ]
                 
                 sequence.append(ball_input)
@@ -152,6 +157,7 @@ def process_folder(folder_path):
     all_sequences = []
     all_player_ids = set()
     processed_files = 0
+    run_outcomes = []
 
     # Get all JSON files and sort them by date
     json_files = sorted(
@@ -169,33 +175,89 @@ def process_folder(folder_path):
             all_player_ids.update(match_player_ids)
             processed_files += 1
             
+            # Collect run outcomes
+            for innings in match_sequences:
+                run_outcomes.extend([ball[-1] for ball in innings])
+            
             print(f"Processed {file_path.name}: {len(match_sequences)} innings, {len(match_player_ids)} players")
         except json.JSONDecodeError:
             print(f"Error decoding JSON in file: {file_path.name}")
         except Exception as e:
             print(f"Error processing file {file_path.name}: {str(e)}")
-    # Print sample of final processed data
-    print("\nSample of processed data:")
-    for i, sequence in enumerate(all_sequences[:3]):  # Print first 3 innings
-        print(f"\nInnings {i+1}:")
-        for j, ball in enumerate(sequence[:5]):  # Print first 5 balls of each innings
-            print(f"  Ball {j+1}: {ball}")
 
-    return all_sequences, processed_files, all_player_ids
+    return all_sequences, processed_files, all_player_ids, run_outcomes
 
 
-# After calling process_folder
-all_sequences, total_files, unique_player_ids = process_folder('/Users/aryamangupta/cric_pred/data/ipl_it20')
 
+
+# After processing
+all_sequences, total_files, unique_player_ids, run_outcomes = process_folder('/Users/aryamangupta/cric_pred/data/ipl_it20')
 print(f"\nTotal files processed: {total_files}")
 print(f"Total innings sequences collected: {len(all_sequences)}")
 print(f"Total unique players across all matches: {len(unique_player_ids)}")
 
+# Count and calculate percentages for run outcomes
+total_balls = len(run_outcomes)
+outcome_counts = Counter(run_outcomes)
+print(f"\nTotal number of balls (sequences for training): {total_balls}")
+print("\nDistribution of run outcomes:")
+for outcome, count in sorted(outcome_counts.items()):
+    percentage = (count / total_balls) * 100
+    print(f"  {outcome}: {count} ({percentage:.2f}%)")
+
+# Print data structure
+print("\nData structure:")
+print(f"Number of innings: {len(all_sequences)}")
+print(f"Number of balls in first innings: {len(all_sequences[0])}")
+
+
+
 # Find the maximum sequence length
 max_len = max(len(seq) for seq in all_sequences)
 
-# Pad sequences
-padded_sequences = pad_sequences(all_sequences, maxlen=max_len, padding='post', dtype='object')
+
+def pad_3d_sequences(sequences, max_len=None, padding_value=0):
+    if max_len is None:
+        max_len = max(len(seq) for seq in sequences)
+    
+    feature_dim = len(sequences[0][0])
+    padded_sequences = np.full((len(sequences), max_len, feature_dim), padding_value, dtype=object)
+    
+    for i, seq in enumerate(sequences):
+        padded_sequences[i, :len(seq)] = seq
+    
+    return padded_sequences
+
+# Use the custom function
+padded_sequences = pad_3d_sequences(all_sequences)
+# After padding
+# After padding
+#padded_sequences = pad_sequences(all_sequences, maxlen=max_len, padding='post', dtype='object')
+
+# Convert to numpy array if it's not already
+padded_sequences = np.array(padded_sequences)
+
+print(f"Shape of padded_sequences: {padded_sequences.shape}")
+
+# Create a mask to identify real data vs padding
+# We'll consider a ball as padding if all its features are 0
+mask = ~np.all(padded_sequences == 0, axis=2)
+
+# Save the mask
+np.save('cricket_sequences_mask.npy', mask)
+
+# Count real balls
+real_ball_count = np.sum(mask)
+print(f"Number of real balls: {real_ball_count}")
+
+# Count padded balls
+padded_ball_count = padded_sequences.shape[0] * padded_sequences.shape[1]
+print(f"Number of balls in padded sequences: {padded_ball_count}")
+
+# To get real data (if needed)
+real_data = padded_sequences[mask]
+
+print(f"Shape of real_data: {real_data.shape}")
 
 # Save padded sequences
 np.save('cricket_sequences.npy', padded_sequences)
