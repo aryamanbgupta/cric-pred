@@ -9,11 +9,12 @@ import pickle
 
 # Load data
 padded_sequences = np.load('cricket_sequences.npy', allow_pickle=True)
-print(f"Shape of padded_sequences: {padded_sequences.shape}")
+
+#print(f"Shape of padded_sequences: {padded_sequences.shape}")
 
 # Create a mask to identify real data vs padding
 mask = ~np.all(padded_sequences == 0, axis=2)
-print(f"Shape of mask: {mask.shape}")
+#print(f"Shape of mask: {mask.shape}")
 
 # Initialize label encoders
 le_player = LabelEncoder()
@@ -74,14 +75,49 @@ def runs_to_class(runs):
 
 y = torch.tensor([[runs_to_class(r) for r in innings] for innings in y])
 
-# Split the data while maintaining 3D structure
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Create a flattened version for distribution checking
+y_flat = y[mask]
 
-print("\nShape of X_train:", X_train.shape)
-print("Shape of y_train:", y_train.shape)
+def check_runs_distribution(y):
+    unique, counts = np.unique(y, return_counts=True)
+    total = len(y)
+
+    print("\nRuns Distribution in Data:")
+    print("----------------------------------")
+    for value, count in zip(unique, counts):
+        percentage = (count / total) * 100
+        if value == 8:
+            label = 'W'
+        else:
+            label = str(value)
+        print(f"{label}: {count} ({percentage:.2f}%)")
+
+# Check distribution
+#check_runs_distribution(y_flat)
+
+#print("\nShape of X:", X.shape)
+#print("Shape of y:", y.shape)
+
+# For training, you might want to use only the real data:
+X_real = X[mask]
+y_real = y[mask]
+
+def custom_train_test_split(X, y, test_size=0.2, random_state=42):
+    n_innings = X.shape[0]
+    indices = np.arange(n_innings)
+    np.random.seed(random_state)
+    np.random.shuffle(indices)
+    split = int(n_innings * (1 - test_size))
+    train_indices = indices[:split]
+    test_indices = indices[split:]
+    return X[train_indices], X[test_indices], y[train_indices], y[test_indices]
+
+# Use this function instead of sklearn's train_test_split
+X_train, X_test, y_train, y_test = custom_train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-
+#print("\nShape of X_train:", X_train.shape)
+#print("Shape of y_train:", y_train.shape)
 
 class CricketDataset(Dataset):
     def __init__(self, X, y, mask):
@@ -93,7 +129,10 @@ class CricketDataset(Dataset):
         return len(self.X)
 
     def __getitem__(self, idx):
-        return self.X[idx], self.y[idx], self.mask[idx]
+        x = self.X[idx]
+        y = self.y[idx]
+        mask = self.mask[idx]
+        return x, y, mask
 
 class TransformerBlock(nn.Module):
     def __init__(self, input_dim, num_heads, ff_dim, dropout=0.1):
@@ -143,8 +182,8 @@ class CricketTransformer(nn.Module):
 
         self.input_proj = nn.Linear(self.embedded_dim, self.adjusted_dim)
 
-        print(f"Embedded dim: {self.embedded_dim}")
-        print(f"Adjusted dim: {self.adjusted_dim}")
+        #print(f"Embedded dim: {self.embedded_dim}")
+        #print(f"Adjusted dim: {self.adjusted_dim}")
 
     def safe_embedding(self, embedding_layer, indices, num_embeddings):
         safe_indices = torch.clamp(indices, 0, num_embeddings - 1)
@@ -176,15 +215,19 @@ class CricketTransformer(nn.Module):
         for transformer in self.transformer_blocks:
             x = transformer(x)
 
-        runs = self.runs_head(x[:, -1, :])  # Use last token for prediction
+        runs = self.runs_head(x)  # Use last token for prediction
         return runs
 
 
 # Training function
 # Modify the train function to handle 3D data and masks
-def train(model, train_loader, val_loader, optimizer, criterion, num_epochs):
+def train(model, train_loader, val_loader, optimizer, criterion, num_epochs, patience=7):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
+    
+    early_stopping = EarlyStopping(patience=patience, verbose=True)
+    best_model = None
+    best_val_loss = float('inf')
 
     for epoch in range(num_epochs):
         model.train()
@@ -192,8 +235,17 @@ def train(model, train_loader, val_loader, optimizer, criterion, num_epochs):
         for batch in train_loader:
             features, targets, batch_mask = [b.to(device) for b in batch]
             optimizer.zero_grad()
+            
             runs_pred = model(features)
-            loss = criterion(runs_pred.view(-1, 9), targets[batch_mask].view(-1))
+            
+            runs_pred = runs_pred.view(-1, runs_pred.size(-1))
+            targets = targets.view(-1)
+            batch_mask = batch_mask.view(-1)
+            
+            masked_pred = runs_pred[batch_mask]
+            masked_targets = targets[batch_mask]
+            
+            loss = criterion(masked_pred, masked_targets)
             loss.backward()
             optimizer.step()
             train_loss += loss.item()
@@ -206,12 +258,20 @@ def train(model, train_loader, val_loader, optimizer, criterion, num_epochs):
             for batch in val_loader:
                 features, targets, batch_mask = [b.to(device) for b in batch]
                 runs_pred = model(features)
-                loss = criterion(runs_pred.view(-1, 9), targets[batch_mask].view(-1))
+                
+                runs_pred = runs_pred.view(-1, runs_pred.size(-1))
+                targets = targets.view(-1)
+                batch_mask = batch_mask.view(-1)
+                
+                masked_pred = runs_pred[batch_mask]
+                masked_targets = targets[batch_mask]
+                
+                loss = criterion(masked_pred, masked_targets)
                 val_loss += loss.item()
 
-                _, predicted = torch.max(runs_pred.view(-1, 9), 1)
-                total += targets[batch_mask].view(-1).size(0)
-                correct += (predicted == targets[batch_mask].view(-1)).sum().item()
+                _, predicted = torch.max(masked_pred, 1)
+                total += masked_targets.size(0)
+                correct += (predicted == masked_targets).sum().item()
 
         train_loss /= len(train_loader)
         val_loss /= len(val_loader)
@@ -219,53 +279,99 @@ def train(model, train_loader, val_loader, optimizer, criterion, num_epochs):
 
         print(f"Epoch {epoch+1}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Accuracy: {accuracy:.2f}%")
 
+        # Check if this is the best model
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            best_model = model.state_dict()
+
+        # Early stopping
+        early_stopping(val_loss)
+        if early_stopping.early_stop:
+            print("Early stopping")
+            break
+
+    # Load best model
+    model.load_state_dict(best_model)
     return model
 
-# Main training loop
+class EarlyStopping:
+    def __init__(self, patience=7, min_delta=0, verbose=False):
+        self.patience = patience
+        self.min_delta = min_delta
+        self.verbose = verbose
+        self.counter = 0
+        self.best_score = None
+        self.early_stop = False
+
+    def __call__(self, val_loss):
+        score = -val_loss
+
+        if self.best_score is None:
+            self.best_score = score
+        elif score < self.best_score + self.min_delta:
+            self.counter += 1
+            if self.verbose:
+                print(f'EarlyStopping counter: {self.counter} out of {self.patience}')
+            if self.counter >= self.patience:
+                self.early_stop = True
+        else:
+            self.best_score = score
+            self.counter = 0
+# get sample predictions for verification
 def print_sample_predictions(model, val_loader, n_samples=10):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.eval()
 
     # Get a batch of validation data
-    features, targets = next(iter(val_loader))
-    features, targets = features.to(device), targets.to(device)
+    features, targets, masks = next(iter(val_loader))
+    features, targets, masks = features.to(device), targets.to(device), masks.to(device)
 
     with torch.no_grad():
-        predictions = model(features)
+        predictions = model(features)  # Shape: [batch_size, seq_len, 9]
 
     # Convert predictions to probabilities
-    probabilities = torch.nn.functional.softmax(predictions, dim=1)
+    probabilities = torch.nn.functional.softmax(predictions, dim=2)
 
     print("\nSample Predictions:")
     print("------------------")
-    for i in range(min(n_samples, len(targets))):
-        true_runs = targets[i, -1].item()
 
-        if true_runs == 8:
-            true_label = 'W'
-        else:
-            true_label = str(true_runs)
+    for i in range(min(n_samples, features.size(0))):  # Iterate over innings
+        innings_mask = masks[i]
+        innings_targets = targets[i][innings_mask]
+        innings_probs = probabilities[i][innings_mask]
 
-        print(f"Sample {i+1}:")
-        print(f"  True runs: {true_label}")
-        print("  Predicted probabilities:")
-        for j in range(9):  # 0-7 runs + wicket
-            if j == 8:
-                run_label = 'W'
+        print(f"Sample Innings {i+1}:")
+        for ball, (true_runs, ball_probs) in enumerate(zip(innings_targets, innings_probs)):
+            true_runs = true_runs.item()
+            if true_runs == 8:
+                true_label = 'W'
             else:
-                run_label = str(j)
-            print(f"    {run_label}: {probabilities[i, j]:.4f}")
-        print()
+                true_label = str(true_runs)
+
+            print(f"  Ball {ball + 1}:")
+            print(f"    True outcome: {true_label}")
+            print("    Predicted probabilities:")
+            for j in range(9):  # 0-7 runs + wicket
+                if j == 8:
+                    run_label = 'W'
+                else:
+                    run_label = str(j)
+                print(f"      {run_label}: {ball_probs[j]:.4f}")
+            print()
+        print("------------------")
 
 
 def main():
     train_mask = ~torch.all(X_train == 0, dim=2)
     test_mask = ~torch.all(X_test == 0, dim=2)
-    
+
+    # Create datasets
     train_dataset = CricketDataset(X_train, y_train, train_mask)
     test_dataset = CricketDataset(X_test, y_test, test_mask)
+
+    # Create data loaders
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(test_dataset, batch_size=32)
+    val_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
     input_dim = X_train.shape[2]  # Use the actual input dimension
     print(f"Input dimension: {input_dim}")
@@ -297,12 +403,11 @@ def main():
     optimizer = optim.Adam(model.parameters())
     criterion = nn.CrossEntropyLoss()
 
-    model = train(model, train_loader, val_loader, optimizer, criterion, num_epochs=50)
-
+    model = train(model, train_loader, val_loader, optimizer, criterion, num_epochs=100, patience=4)
     # Save the model
     torch.save(model.state_dict(), 'cricket_transformer_model.pth')
 
-    print_sample_predictions(model, val_loader)
+    print_sample_predictions(model, val_loader, n_samples= 10)
 
 if __name__ == "__main__":
     main()

@@ -5,7 +5,15 @@ import pickle
 import csv
 import json
 from collections import defaultdict
-from pred_transformer_v2 import CricketTransformer
+from pred_transformer_v2_2 import CricketTransformer
+import random
+
+
+# Set a different seed each time
+random_seed = random.randint(1, 10000)
+random.seed(random_seed)
+np.random.seed(random_seed)
+torch.manual_seed(random_seed)
 
 class CricketSimulation:
     def __init__(self, model_path, label_encoder_path, scaler_path, names_csv_path, players_info_path, ground_avg_scores_path, num_overs=20):
@@ -28,7 +36,8 @@ class CricketSimulation:
             n_bowling_styles=len(self.le_bowling_style.classes_),
             num_heads=8,
             num_layers=6,
-            ff_dim=256
+            ff_dim=256,
+            dropout=0.1
         )
         self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
         self.model.eval()
@@ -94,40 +103,43 @@ class CricketSimulation:
         self.player_stats[player_id][role] = self.player_stats[player_id][role][-5:]  # Keep only last 5 performances
 
     def generate_ball_input(self):
-        input_array = np.zeros((1, 19))
+        input_array = np.zeros((1, self.balls + 1, 19))  # +1 to include the current ball
 
-        batter_info = self.get_player_info(self.current_batter)
-        non_striker_info = self.get_player_info(self.current_non_striker)
-        bowler_info = self.get_player_info(self.current_bowler)
+        for i in range(self.balls + 1):
+            batter_info = self.get_player_info(self.current_batter)
+            non_striker_info = self.get_player_info(self.current_non_striker)
+            bowler_info = self.get_player_info(self.current_bowler)
 
-        input_array[0, 0] = self.inning
-        input_array[0, 1] = self.score
-        input_array[0, 2] = self.wickets
-        input_array[0, 3] = self.balls
-        input_array[0, 4] = self.safe_transform(self.le_player, [self.current_batter])[0]
-        input_array[0, 5] = self.safe_transform(self.le_player, [self.current_non_striker])[0]
-        input_array[0, 6] = self.safe_transform(self.le_player, [self.current_bowler])[0]
-        input_array[0, 7] = self.get_batting_position(self.current_batter)
-        input_array[0, 8] = self.safe_transform(self.le_batting_style, [batter_info['batting_style']])[0]
-        input_array[0, 9] = self.safe_transform(self.le_playing_role, [batter_info['playing_role']])[0]
-        input_array[0, 10] = self.safe_transform(self.le_batting_style, [non_striker_info['batting_style']])[0]
-        input_array[0, 11] = self.safe_transform(self.le_playing_role, [non_striker_info['playing_role']])[0]
-        input_array[0, 12] = self.safe_transform(self.le_bowling_style, [bowler_info['bowling_style']])[0]
-        input_array[0, 13] = self.get_player_form(self.current_batter, 'batting')
-        input_array[0, 14] = self.get_player_form(self.current_non_striker, 'batting')
-        input_array[0, 15] = self.get_player_form(self.current_bowler, 'bowling')
-        input_array[0, 16] = 0  # is_noball, set to 0 for now
-        input_array[0, 17] = 0  # is_wide_or_noball, set to 0 for now
-        input_array[0, 18] = self.target
+            input_array[0, i, 0] = self.inning
+            input_array[0, i, 1] = self.score
+            input_array[0, i, 2] = self.wickets
+            input_array[0, i, 3] = i
+            input_array[0, i, 4] = self.safe_transform(self.le_player, [self.current_batter])[0]
+            input_array[0, i, 5] = self.safe_transform(self.le_player, [self.current_non_striker])[0]
+            input_array[0, i, 6] = self.safe_transform(self.le_player, [self.current_bowler])[0]
+            input_array[0, i, 7] = self.get_batting_position(self.current_batter)
+            input_array[0, i, 8] = self.safe_transform(self.le_batting_style, [batter_info['batting_style']])[0]
+            input_array[0, i, 9] = self.safe_transform(self.le_playing_role, [batter_info['playing_role']])[0]
+            input_array[0, i, 10] = self.safe_transform(self.le_batting_style, [non_striker_info['batting_style']])[0]
+            input_array[0, i, 11] = self.safe_transform(self.le_playing_role, [non_striker_info['playing_role']])[0]
+            input_array[0, i, 12] = self.safe_transform(self.le_bowling_style, [bowler_info['bowling_style']])[0]
+            input_array[0, i, 13] = self.get_player_form(self.current_batter, 'batting')
+            input_array[0, i, 14] = self.get_player_form(self.current_non_striker, 'batting')
+            input_array[0, i, 15] = self.get_player_form(self.current_bowler, 'bowling')
+            input_array[0, i, 16] = 0  # is_noball, set to 0 for now
+            input_array[0, i, 17] = 0  # is_wide_or_noball, set to 0 for now
+            input_array[0, i, 18] = self.target
 
-        print("Raw input:", input_array)
+        #print("Raw input shape:", input_array.shape)
         # Apply the scaler to the numerical features
         numerical_features = [1, 2, 3, 7, 13, 14, 15, 18]
-        input_array[:, numerical_features] = self.scaler.transform(input_array[:, numerical_features])
+        flat_numerical = input_array[:, :, numerical_features].reshape(-1, len(numerical_features))
+        normalized_numerical = self.scaler.transform(flat_numerical)
+        input_array[:, :, numerical_features] = normalized_numerical.reshape(input_array.shape[0], input_array.shape[1], -1)
 
-        print("Scaled input:", input_array)
+        #print("Scaled input shape:", input_array.shape)
 
-        return torch.FloatTensor(input_array).unsqueeze(1)  # Add sequence dimension
+        return torch.FloatTensor(input_array)
 
     def safe_transform(self, encoder, values):
         try:
@@ -140,10 +152,16 @@ class CricketSimulation:
 
     def predict_ball_outcome(self, ball_input):
         with torch.no_grad():
-            runs_pred, noball_pred, wide_noball_pred = self.model(ball_input)
-            runs_prob = torch.softmax(runs_pred, dim=-1)
-            print("Runs probabilities:", runs_prob)
-            outcome = np.random.choice(range(9), p=runs_prob[0].numpy())
+            runs_pred = self.model(ball_input)
+            #print("Runs pred shape:", runs_pred.shape)
+            runs_prob = torch.softmax(runs_pred.squeeze(), dim=-1)
+            #print("Runs probabilities shape:", runs_prob.shape)
+            print("Runs probabilities:", runs_prob[-1])
+            
+            if runs_prob.dim() == 1:
+                outcome = np.random.choice(range(9), p=runs_prob.numpy())
+            else:
+                outcome = np.random.choice(range(9), p=runs_prob[-1].numpy())  # Use the last ball's prediction
         return outcome
 
     def simulate_ball(self):
@@ -160,7 +178,7 @@ class CricketSimulation:
         return outcome
 
     def update_match_state(self, outcome):
-        print(f"Updating match state with outcome: {outcome}")
+        #print(f"Updating match state with outcome: {outcome}")
         if outcome == 8:  # Wicket
             self.wickets += 1
             self.update_player_stats(self.current_bowler, 'bowling', 1)  # 1 wicket
@@ -172,7 +190,7 @@ class CricketSimulation:
             self.update_player_stats(self.current_bowler, 'bowling', -outcome / 6)  # Negative run rate for bowler
 
         self.balls += 1
-        print(f"Updated state: Score: {self.score}, Wickets: {self.wickets}, Balls: {self.balls}")
+        #(f"Updated state: Score: {self.score}, Wickets: {self.wickets}, Balls: {self.balls}")
         if self.balls % 6 == 0:
             self.current_batter, self.current_non_striker = self.current_non_striker, self.current_batter
 
@@ -290,9 +308,9 @@ class CricketSimulation:
 
 # Usage example
 if __name__ == "__main__":
-    model_path = "cricket_transformer.pth"
-    label_encoder_path = "label_encoders.pkl"
-    scaler_path = "standard_scaler.pkl"
+    model_path = "cricket_transformer_model(1).pth"
+    label_encoder_path = "label_encoders(1).pkl"
+    scaler_path = "standard_scaler(1).pkl"
     names_csv_path = "names_v2.csv"
     players_info_path = "data/players_info.csv"
     ground_avg_scores_path = "data/ground_average_scores.json"
