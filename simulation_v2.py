@@ -39,7 +39,9 @@ class CricketSimulation:
             ff_dim=256,
             dropout=0.1
         )
-        self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        state_dict = torch.load(model_path, map_location=device, weights_only=True)
+        self.model.load_state_dict(state_dict)
         self.model.eval()
 
     def load_label_encoders(self, label_encoder_path):
