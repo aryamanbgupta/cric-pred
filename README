@@ -1,0 +1,129 @@
+# Cricket Match Outcome Prediction Using Machine Learning
+
+## Overview
+
+This project aims to predict the outcome of T20 cricket matches using machine learning techniques. By analyzing ball-by-ball data and simulating matches, the model predicts the probabilities of various outcomes, helping to determine which team is more likely to win.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Project Structure](#project-structure)
+- [Data Parsing (`parse.py`)](#data-parsing-parsepy)
+- [Model Training](#model-training)
+- [Match Simulation (`simulate.py`)](#match-simulation-simulatepy)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [License](#license)
+
+## Introduction
+
+Predicting cricket match outcomes is a complex task due to the numerous variables involved in the game. This project leverages a transformer-based machine learning model to analyze historical ball-by-ball data of T20 matches. By simulating matches multiple times, we can estimate average team scores and determine the likelihood of each team winning.
+
+## Project Structure
+
+- `parse.py`: Script for parsing and preprocessing the raw ball-by-ball JSON data.
+- `simulate.py`: Script for simulating matches using the trained model.
+- `data/`: Directory containing the raw JSON data files.
+- `models/`: Directory where the trained model is saved.
+- `results/`: Directory where simulation results are stored.
+
+## Data Parsing (`parse.py`)
+
+The `parse.py` script processes the collected ball-by-ball data of T20 matches stored in JSON format. It performs the following tasks:
+
+- **Data Extraction**: Reads and parses the JSON data to extract relevant information for each delivery, such as:
+  - Batsman and bowler details
+  - Runs scored
+  - Wicket information
+  - Over and ball numbers
+  - Match context features
+- **Feature Engineering**: Creates additional features that might influence the outcome, such as:
+  - Current score and wickets in hand
+  - Run rate
+  - Required run rate (for second innings)
+- **Sequence Generation**: Converts the extracted features into sequences suitable for input into a transformer model.
+
+## Model Training
+
+The transformer model is trained on the preprocessed sequences to learn patterns and dependencies in the data. The model predicts the probability distribution of possible outcomes (e.g., number of runs scored, wicket) for the next delivery based on the current state of the match.
+
+## Match Simulation (`simulate.py`)
+
+The `simulate.py` script uses the trained model to simulate cricket matches on a ball-by-ball basis. The simulation involves:
+
+1. **Initialization**: Setting up the match with team compositions and initial conditions.
+2. **Prediction and Outcome Selection**:
+   - For each delivery, the model predicts the probabilities of possible outcomes.
+   - An outcome is randomly selected based on these probabilities (weighted random choice).
+3. **State Update**: The match state is updated according to the selected outcome (e.g., updating the score, changing batsmen after a wicket).
+4. **Iteration**: Steps 2 and 3 are repeated for each delivery in the innings.
+5. **Multiple Simulations**: The same match is simulated multiple times to obtain an average score and assess variability.
+
+By aggregating the results from multiple simulations, we can estimate which team is more likely to win and by what margin.
+
+## Usage
+
+### Prerequisites
+
+- Python 3.x
+- Required Python packages (see [Dependencies](#dependencies))
+
+### Steps
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/cricket-match-predictor.git
+   cd cricket-match-predictor
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Prepare Data**
+
+   - Place your ball-by-ball JSON data files in the `data/` directory.
+
+4. **Parse Data**
+
+   ```bash
+   python parse.py
+   ```
+
+   - This will preprocess the data and generate sequences for model training.
+
+5. **Train the Model**
+
+   - Ensure you have a script for training the model (e.g., `train_model.py`).
+   - Run the training script:
+
+     ```bash
+     python train_model.py
+     ```
+
+6. **Simulate Matches**
+
+   ```bash
+   python simulate.py
+   ```
+
+   - Simulate a specific match multiple times to estimate outcomes.
+
+7. **Analyze Results**
+
+   - Check the `results/` directory for simulation outputs and statistical summaries.
+
+## Dependencies
+
+- **Python Packages**
+  - NumPy
+  - Pandas
+  - PyTorch (for the transformer model)
+  - JSON libraries (`json` module)
+  - Any other packages listed in `requirements.txt`
+
+
+
