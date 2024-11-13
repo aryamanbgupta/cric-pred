@@ -6,24 +6,27 @@ def calculate_expected_runs(ball_by_ball_data):
     ball_by_ball_data: DataFrame - Ball by ball data with over, wickets, runs info
     
     Returns:
-    DataFrame - Expected runs for each state
+    tuple - (DataFrame with expected runs for each state, DataFrame with ball by ball data including wickets)
     """
+    # Create a copy to avoid modifying original data
+    data = ball_by_ball_data.copy()
+    
     # First calculate wickets at each state
     def calculate_wickets_state(group):
         group['wickets'] = group['is_wicket'].cumsum()
         return group
     
     # Apply by match and innings
-    ball_by_ball_data = ball_by_ball_data.groupby(['match_id', 'innings']).apply(calculate_wickets_state)
+    data = data.groupby(['match_id', 'innings']).apply(calculate_wickets_state).reset_index(drop=True)
     
     # Calculate empirical average of runs scored in each state
-    state_runs = ball_by_ball_data.groupby(['over', 'wickets'])['total_runs'].agg(['mean', 'count']).reset_index()
+    state_runs = data.groupby(['over', 'wickets'])['total_runs'].agg(['mean', 'count']).reset_index()
     state_runs.columns = ['over', 'wickets', 'expected_runs', 'observations']
     
     # Filter states with minimum observations (e.g., 10)
     state_runs = state_runs[state_runs['observations'] >= 10]
     
-    return state_runs
+    return state_runs, data
 
 def calculate_run_values(ball_by_ball_data, expected_runs):
     """
@@ -99,9 +102,9 @@ def main_analysis(ball_by_ball_data):
     Returns:
     DataFrame - Ball by ball data with all calculated metrics
     """
-    # Calculate expected runs
+     # Calculate expected runs
     print("Calculating expected runs...")
-    expected_runs = calculate_expected_runs(ball_by_ball_data)
+    expected_runs, ball_by_ball_with_wickets = calculate_expected_runs(ball_by_ball_data)
     
     # Plot expected runs visualization
     print("\nGenerating expected runs visualization...")
@@ -109,7 +112,7 @@ def main_analysis(ball_by_ball_data):
     
     # Calculate run values
     print("\nCalculating run values...")
-    data_with_run_values = calculate_run_values(ball_by_ball_data, expected_runs)
+    data_with_run_values = calculate_run_values(ball_by_ball_with_wickets, expected_runs)
     
     # Calculate Leverage Index
     print("\nCalculating Leverage Index...")
@@ -124,7 +127,7 @@ def main_analysis(ball_by_ball_data):
     validate_calculations(final_data)
     
     return final_data, expected_runs, leverage_data
-
+    
 # Add validation and visualization functions
 def validate_calculations(final_data):
     """
