@@ -1,5 +1,6 @@
 from cricWAR_data_processor import process_cricket_data
 from expected_runs import main_analysis
+from regression_models import main_regression_analysis
 import glob
 import os
 
@@ -24,12 +25,24 @@ def run_cricwar_analysis():
     print("\nStarting expected runs analysis...")
     final_data, expected_runs, leverage_data = main_analysis(ball_by_ball_data)
     
+     # Step 3: Regression Analysis
+    print("\nStarting regression analysis...")
+    adjusted_data, batting_model, bowling_model = main_regression_analysis(final_data)
+    
+    # Save results
+    print("\nSaving results...")
+    adjusted_data.to_csv('output/data/adjusted_data.csv', index=False)
+    
+    return adjusted_data, batting_model, bowling_model
+
+    '''
     # Save results
     print("\nSaving results...")
     final_data.to_csv('output/data/processed_data.csv', index=False)
     expected_runs.to_csv('output/data/expected_runs.csv', index=False)
     
     return final_data, expected_runs, leverage_data
+    '''
 
 if __name__ == "__main__":
     final_data, expected_runs, leverage_data = run_cricwar_analysis()
