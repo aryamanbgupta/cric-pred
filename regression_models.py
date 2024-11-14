@@ -49,6 +49,8 @@ def prepare_regression_data(data):
     
     return regression_data
 
+# regression_models.py
+
 def fit_batting_model(data):
     """
     Fit regression model for batting adjustments
@@ -81,56 +83,71 @@ def fit_batting_model(data):
     X = data[categorical_features + numeric_features]
     y = data['leveraged_run_value']
     
-    # Verify no missing values in X and y
-    assert X.isnull().sum().sum() == 0, "Missing values found in X"
-    assert y.isnull().sum() == 0, "Missing values found in y"
+    # Check for missing values - fixed the ambiguous boolean evaluation
+    x_nulls = X.isnull().sum().sum()
+    y_nulls = y.isnull().sum().sum()
+    
+    if x_nulls > 0:
+        print(f"Warning: Found {x_nulls} missing values in features:")
+        print(X.isnull().sum())
+        raise ValueError("Missing values found in features (X)")
+        
+    if y_nulls > 0:
+        print(f"Warning: Found {y_nulls} missing values in target variable")
+        raise ValueError("Missing values found in target variable (y)")
     
     model.fit(X, y)
     
     return model, (categorical_features, numeric_features)
 
-
 def fit_bowling_model(data):
     """
     Fit regression model for bowling adjustments
-    
-    Parameters:
-    data: DataFrame - Prepared regression data
-    
-    Returns:
-    tuple - (fitted model, feature names)
     """
-    # For bowling, we use negative of leveraged run value
-    data['bowling_value'] = -data['leveraged_run_value']
+    print("\nPreparing bowling model data...")
     
-    # Same features as batting model
-    return fit_batting_model(data.rename(columns={'bowling_value': 'leveraged_run_value'}))
+    # Create a copy to avoid modifying original data
+    bowling_data = data.copy()
+    
+    # For bowling, we use negative of leveraged run value
+    bowling_data['leveraged_run_value'] = -bowling_data['leveraged_run_value']
+    
+    print("Sample of bowling data:")
+    print(bowling_data[['venue', 'innings', 'platoon_advantage', 'leveraged_run_value']].head())
+    
+    # Fit model using the negative values
+    return fit_batting_model(bowling_data)
 
 def calculate_adjusted_values(data, batting_model, bowling_model, feature_names):
     """
     Calculate adjusted run values using fitted models
-    
-    Parameters:
-    data: DataFrame - Ball by ball data
-    batting_model: Pipeline - Fitted batting model
-    bowling_model: Pipeline - Fitted bowling model
-    feature_names: tuple - Names of features used in models
-    
-    Returns:
-    DataFrame - Data with adjusted run values
     """
     categorical_features, numeric_features = feature_names
     X = data[categorical_features + numeric_features]
     
-    # Get predicted values
-    batting_predicted = batting_model.predict(X)
-    bowling_predicted = bowling_model.predict(X)
+    # Get predicted values and ensure they're 1D arrays
+    batting_predicted = batting_model.predict(X).ravel()  # Using ravel() to ensure 1D
+    bowling_predicted = bowling_model.predict(X).ravel()  # Using ravel() to ensure 1D
     
-    # Calculate residuals (adjusted values)
-    data['adjusted_batting_value'] = data['leveraged_run_value'] - batting_predicted
-    data['adjusted_bowling_value'] = -data['leveraged_run_value'] - bowling_predicted
+    # Create new DataFrame for adjusted values
+    adjusted_data = data.copy()
     
-    return data
+    # Calculate adjusted values
+    adjusted_data['batting_predicted'] = batting_predicted
+    adjusted_data['bowling_predicted'] = bowling_predicted
+    adjusted_data['adjusted_batting_value'] = adjusted_data['leveraged_run_value'] - batting_predicted
+    adjusted_data['adjusted_bowling_value'] = -adjusted_data['leveraged_run_value'] - bowling_predicted
+    
+    # Add some validation prints
+    print("\nShape of predictions:")
+    print(f"Batting predictions shape: {batting_predicted.shape}")
+    print(f"Bowling predictions shape: {bowling_predicted.shape}")
+    
+    print("\nSample of adjusted values:")
+    print(adjusted_data[['leveraged_run_value', 'batting_predicted', 'bowling_predicted', 
+                        'adjusted_batting_value', 'adjusted_bowling_value']].head())
+    
+    return adjusted_data
 
 def main_regression_analysis(data):
     """
@@ -151,6 +168,10 @@ def main_regression_analysis(data):
     print("\nCalculating adjusted values...")
     final_data = calculate_adjusted_values(regression_data, batting_model, bowling_model, feature_names)
     
+    # Print summary statistics
+    print("\nSummary of adjusted values:")
+    print(final_data[['adjusted_batting_value', 'adjusted_bowling_value']].describe())
+    
     return final_data, batting_model, bowling_model
 
 def print_model_summary(model, feature_names):
@@ -163,14 +184,17 @@ def print_model_summary(model, feature_names):
     
     # Get feature names after preprocessing
     cat_features = preprocessor.named_transformers_['cat'].get_feature_names_out(categorical_features)
-    feature_names = np.concatenate([cat_features, numeric_features])
+    all_features = np.concatenate([cat_features, numeric_features])
     
     # Print coefficients
-    print("Coefficients:")
-    for name, coef in zip(feature_names, regressor.coef_):
-        print(f"{name}: {coef:.4f}")
-    print(f"Intercept: {regressor.intercept_:.4f}")
+    print("\nCoefficients:")
+    coef_df = pd.DataFrame({
+        'Feature': all_features,
+        'Coefficient': regressor.coef_
+    })
+    print(coef_df)
+    print(f"\nIntercept: {regressor.intercept_:.4f}")
     
     # Print R-squared if available
     if hasattr(regressor, 'score'):
-        print(f"R-squared: {regressor.score:.4f}")
+        print(f"R-squared: {regressor.score_:.4f}")

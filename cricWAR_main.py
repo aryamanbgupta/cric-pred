@@ -1,6 +1,7 @@
 from cricWAR_data_processor import process_cricket_data
 from expected_runs import main_analysis
 from regression_models import main_regression_analysis
+from war_calculator import main_war_calculation
 import glob
 import os
 
@@ -29,9 +30,14 @@ def run_cricwar_analysis():
     print("\nStarting regression analysis...")
     adjusted_data, batting_model, bowling_model = main_regression_analysis(final_data)
     
+     # Step 4: Calculate WAR
+    print("\nCalculating WAR...")
+    seasons = adjusted_data['season'].unique().tolist()
+    player_stats = main_war_calculation(adjusted_data, seasons)
+    
     # Save results
     print("\nSaving results...")
-    adjusted_data.to_csv('output/data/adjusted_data.csv', index=False)
+    player_stats.to_csv('output/data/player_war_stats.csv')
     
     return adjusted_data, batting_model, bowling_model
 
