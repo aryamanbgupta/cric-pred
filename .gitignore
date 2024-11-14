@@ -5,3 +5,4 @@ myenv/
 player_cache/
 *.pyc
 processed_data.csv
+adjusted_data.csv

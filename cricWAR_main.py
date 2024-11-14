@@ -2,6 +2,7 @@ from cricWAR_data_processor import process_cricket_data
 from expected_runs import main_analysis
 from regression_models import main_regression_analysis
 from war_calculator import main_war_calculation
+from war_verify import analyze_2019_results
 import glob
 import os
 
@@ -31,15 +32,15 @@ def run_cricwar_analysis():
     adjusted_data, batting_model, bowling_model = main_regression_analysis(final_data)
     
      # Step 4: Calculate WAR
+    # Step 4: Calculate WAR
     print("\nCalculating WAR...")
-    seasons = adjusted_data['season'].unique().tolist()
-    player_stats = main_war_calculation(adjusted_data, seasons)
+    player_stats = main_war_calculation(adjusted_data)
     
     # Save results
     print("\nSaving results...")
     player_stats.to_csv('output/data/player_war_stats.csv')
     
-    return adjusted_data, batting_model, bowling_model
+    return player_stats, adjusted_data
 
     '''
     # Save results
@@ -51,4 +52,6 @@ def run_cricwar_analysis():
     '''
 
 if __name__ == "__main__":
-    final_data, expected_runs, leverage_data = run_cricwar_analysis()
+    player_stats, adjusted_data = run_cricwar_analysis()
+    # Analyze 2019 results specifically
+    batting_top, bowling_top, detailed_stats = analyze_2019_results(player_stats, adjusted_data)
