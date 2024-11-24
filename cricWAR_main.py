@@ -5,6 +5,7 @@ from war_calculator import main_war_calculation
 from war_verify import analyze_2019_results
 import glob
 import os
+import json
 
 def setup_directories():
     """Create necessary output directories"""
@@ -17,11 +18,22 @@ def run_cricwar_analysis():
     
     # Paths
     json_files = glob.glob('data/ipl_json/*.json')
+    json_files_2019 = []
+    
+    #for verification
+    for file in json_files:
+        with open(file, 'r') as f:
+            match_data = json.load(f)
+            if match_data['info']['dates'][0].startswith('2019'):
+                json_files_2019.append(file)
+    
+    print(f"Found {len(json_files_2019)} matches from 2019")
+    
     players_info_file = 'data/players_info.csv'
     
     # Step 1: Process raw data
     print("Processing raw data...")
-    ball_by_ball_data, venue_stats = process_cricket_data(json_files, players_info_file)
+    ball_by_ball_data, venue_stats = process_cricket_data(json_files_2019, players_info_file)
     
     # Step 2: Calculate expected runs and Leverage Index
     print("\nStarting expected runs analysis...")
