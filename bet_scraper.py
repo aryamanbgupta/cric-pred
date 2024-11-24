@@ -71,7 +71,31 @@ try:
                 scroll_to_element(driver, match_link)
                 match_link.click()
 
-                time.sleep(2)
+                bet_category_elements = wait.until(
+                    EC.presence_of_all_elements_located((By.CLASS_NAME, "tab-switcher-sub-tab-child"))
+                )
+                
+                # Extract format names
+                bet_categories = [bet_category_element.text for bet_category_element in bet_category_elements]
+                print(f"Found bet categories: {bet_categories}")
+
+                # Navigate through each format
+                for bet_category in bet_categories:
+                    bet_category_link = wait.until(
+                        EC.element_to_be_clickable((By.LINK_TEXT, bet_category))
+                    )
+                    scroll_to_element(driver, bet_category_link)
+                    bet_category_link.click()
+
+                    bet_type_elements = wait.until(
+                        EC.presence_of_all_elements_located((By.CLASS_NAME, "cb-collapsible-header"))
+                    )
+                    
+                    # Extract bet type names
+                    bet_types = [bet_type_element.text for bet_type_element in bet_type_elements]
+                    print(f"Found bet types: {bet_types}")
+                    time.sleep(2)
+
                 driver.back()
                         # bet_infos = wait.until(
                         #     EC.presence_of_all_elements_located((By.CLASS_NAME,"sportsbook-outcome-cell__label"))
