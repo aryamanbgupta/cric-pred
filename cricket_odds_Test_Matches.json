@@ -1,0 +1,92 @@
+{
+    "MATCH LINES": {
+        "MONEYLINE": {
+            "West Indies vs Bangladesh": {},
+            "Australia vs India": {},
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "MONEYLINE (2-WAY)": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "DRAW NO BET": {
+            "West Indies vs Bangladesh": {}
+        },
+        "DOUBLE CHANCE": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        }
+    },
+    "LIVE PROPS": {
+        "BATTER RUNS": {
+            "West Indies vs Bangladesh": {},
+            "Australia vs India": {}
+        },
+        "NEXT DELIVERY RUNS": {
+            "West Indies vs Bangladesh": {},
+            "Australia vs India": {}
+        }
+    },
+    "PLAYER PROPS": {
+        "HIGHEST SCORE": {
+            "New Zealand\nvs\nEngland": {}
+        },
+        "INNINGS BATTER": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "INNINGS BOWLER": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "PLAYER TOTALS": {
+            "New Zealand\nvs\nEngland": {}
+        },
+        "BATTER MATCH BET": {
+            "New Zealand\nvs\nEngland": {}
+        },
+        "BOWLER MATCH BET": {
+            "New Zealand\nvs\nEngland": {}
+        },
+        "BATTER TO SCORE 50+/100+": {
+            "New Zealand\nvs\nEngland": {}
+        }
+    },
+    "MATCH PROPS": {
+        "1ST WICKET": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "1ST OVER": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "HIGHEST OPENING PARTNERSHIP": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "MOST RUN OUTS": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "X SCORE IN MATCH": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "MATCH FOURS/SIXES": {
+            "South Africa\nvs\nSri Lanka": {},
+            "New Zealand\nvs\nEngland": {}
+        },
+        "NEXT OVER RUNS": {
+            "West Indies vs Bangladesh": {},
+            "Australia vs India": {}
+        },
+        "": {
+            "Southampton vs Liverpool": {}
+        }
+    },
+    "INNINGS PROPS": {},
+    "FUTURES": {},
+    "WICKETS": {}
+}

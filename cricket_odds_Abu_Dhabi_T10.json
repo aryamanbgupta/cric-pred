@@ -1,0 +1,13 @@
+{
+    "MATCH LINES": {
+        "MONEYLINE": {
+            "New York Strikers vs Deccan Gladiators": {},
+            "Morrisville Samp Army vs Chennai Brave Jaguars": {}
+        }
+    },
+    "LIVE PROPS": {
+        "ODD/EVEN": {
+            "New York Strikers vs Deccan Gladiators": {}
+        }
+    }
+}

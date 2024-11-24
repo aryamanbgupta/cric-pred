@@ -67,7 +67,23 @@ try:
                     match_names = [match_element.text for match_element in matches_elements]
 
                     for match in match_names:
-                        print(match)
+                        print(f"\nProcessing {match} match...")
+                        bet_infos = wait.until(
+                            EC.presence_of_all_elements_located((By.CLASS_NAME,"sportsbook-outcome-cell__label"))
+                        )
+                        # print("working till here")
+                        bet_odds_elements = wait.until(
+                            EC.presence_of_all_elements_located((By.CLASS_NAME,"sportsbook-odds.american.default-color"))
+                        )
+
+                        print("working till here")
+                        bet_winner_conditions = [bet_info.text for bet_info in bet_infos]
+
+                        # for bet_winner_condition in bet_winner_conditions:
+                        #     print(f"\nOdds for {bet_winner_condition}")
+                        bet_odds = [bet_odds_element.text for bet_odds_element in bet_odds_elements]
+                        for bet_winner_condition,bet_odd in zip(bet_winner_conditions, bet_odds):
+                            print (f"\nOdds for {bet_winner_condition} are {bet_odd}")
 
 
 

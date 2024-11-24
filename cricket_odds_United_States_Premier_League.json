@@ -1,0 +1,9 @@
+{
+    "MATCH LINES": {
+        "MONEYLINE": {
+            "Maryland Mavericks vs New York Cowboys": {},
+            "New Jersey Titans vs California Golden Eagles": {},
+            "Carolina Eagles vs Atlanta Blackcaps": {}
+        }
+    }
+}
