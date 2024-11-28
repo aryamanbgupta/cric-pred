@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import json
+from datetime import datetime
 
 def scroll_to_element(driver, element):
     """Scroll element into view using JavaScript"""
@@ -10,6 +12,10 @@ def scroll_to_element(driver, element):
     time.sleep(1)  #
 
 try:
+    cricket_data = {
+        'timestamp': datetime.now().isoformat(),
+        'formats': {}
+    }
     driver = webdriver.Chrome()
     driver.get("https://sportsbook.draftkings.com/sports/cricket")
     wait = WebDriverWait(driver, 10)
@@ -27,7 +33,9 @@ try:
     for format_name in format_names:
         try:
             print(f"\nProcessing {format_name} matches...")
-            
+            cricket_data['formats'][format_name] = {
+                'matches': {}
+            }
             # Click on the format
             format_link = wait.until(
                 EC.element_to_be_clickable((By.LINK_TEXT, format_name))
@@ -45,7 +53,7 @@ try:
             print (match_names)
             for match_name in match_names:
                 print(f"\nProcessing {match_name} match...")
-
+                
                 #get the date if match is not live
                 if '\n' in match_name:
                     match_name_first_team  = match_name.split('\n')[0]
@@ -65,6 +73,11 @@ try:
 
                 print (f"Match Date is {match_date}")
 
+                cricket_data['formats'][format_name]['matches'][match_name] = {
+                    'date': match_date,
+                    'betting_categories': {}
+                }
+                
                 match_link = wait.until(
                     EC.element_to_be_clickable((By.XPATH, match_name_xpath))
                 )
@@ -78,9 +91,12 @@ try:
                 # Extract format names
                 bet_categories = [bet_category_element.text for bet_category_element in bet_category_elements]
                 print(f"Found bet categories: {bet_categories}")
-
                 # Navigate through each format
                 for bet_category in bet_categories:
+                    cricket_data['formats'][format_name]['matches'][match_name]['betting_categories'][bet_category] = {
+                        'bet_types': {}
+                    }
+
                     bet_category_link = wait.until(
                         EC.element_to_be_clickable((By.LINK_TEXT, bet_category))
                     )
@@ -94,6 +110,63 @@ try:
                     # Extract bet type names
                     bet_types = [bet_type_element.text for bet_type_element in bet_type_elements]
                     print(f"Found bet types: {bet_types}")
+                    bet_type_info = {}
+                    for bet_type in bet_types:
+                        try:
+                            # Find the parent div that contains this bet type header
+                            parent_div_xpath = f"//div[contains(@class, 'cb-collapsible') and .//h2[contains(@class, 'cb-collapsible-header') and contains(text(), '{bet_type}')]]"
+                            parent_div = wait.until(
+                                EC.presence_of_element_located((By.XPATH, parent_div_xpath))
+                            )
+                            
+                            bet_info = {
+                                'description': None,
+                                'betting_options': []
+                            }
+                            # Check if this div contains the p element with the specific class
+                            try:
+                                label_element = parent_div.find_element(By.CSS_SELECTOR, "p.cb-market__label--truncate-strings")
+                                bet_description = label_element.text
+                                print(f"Bet type: {bet_type} has label: {bet_description}")
+                            except:
+                                print(f"Bet type: {bet_type} has no label")
+                                bet_description = ""
+                            
+                            bet_info['description'] = bet_description
+
+                            betting_buttons = parent_div.find_elements(By.CSS_SELECTOR, "button.cb-market__button.cb-market__button--regular")
+        
+                            for button in betting_buttons:
+                                try:
+                                    # Get the option name and odds
+                                    option_name = button.find_element(By.CSS_SELECTOR, "span.cb-market__button-title").text
+                                    try:
+                                        points = button.find_element(By.CSS_SELECTOR, "span.cb-market__button-points").text
+                                        option_name = f"{option_name} {points}"  # Combine name with points
+                                    except:
+                                        pass  # No points span found, just use the base option name
+
+                                    option_odds = button.find_element(By.CSS_SELECTOR, "span.cb-market__button-odds").text
+                                    
+                                    print (f"bet option: {option_name} has odds {option_odds}")
+                                    
+                                    bet_info['betting_options'].append({
+                                        'option': option_name,
+                                        'odds': option_odds
+                                    })
+
+                                except Exception as e:
+                                    print(f"Error processing betting option: {e}")
+                                    continue
+                            
+                            bet_type_info[bet_type] = bet_info
+                
+                        except Exception as e:
+                            print(f"Error processing bet type {bet_type}: {e}")
+                            continue
+                    
+                    cricket_data['formats'][format_name]['matches'][match_name]['betting_categories'][bet_category]['bet_types'] = bet_type_info
+
                     time.sleep(2)
 
                 driver.back()
@@ -189,3 +262,9 @@ except Exception as e:
 
 finally:
     driver.quit()
+
+timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+filename = f'cricket_betting_data_{timestamp}.json'
+
+with open(filename, 'w', encoding='utf-8') as f:
+    json.dump(cricket_data, f, indent=2, ensure_ascii=False)
