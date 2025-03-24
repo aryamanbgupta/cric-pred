@@ -1,0 +1,379 @@
+{
+  "timestamp": "2025-02-24T19:22:20.883653",
+  "formats": {
+    "Twenty20 International": {
+      "matches": {
+        "Zimbabwe\nvs\nIreland": {
+          "date": "TOMORROW 11:30AM",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "description": "",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "−130"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+105"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "description": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Wicket": {
+                  "description": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    },
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    },
+                    {
+                      "option": "Over 18.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 18.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over": {
+                  "description": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "description": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "−125"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "description": "",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "−130"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+105"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Highest Score": {
+                  "description": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket": {
+                  "description": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    },
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    },
+                    {
+                      "option": "Over 18.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 18.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over": {
+                  "description": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "description": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "−125"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "description": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+295"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+295"
+                    }
+                  ]
+                },
+                "X Score in Match": {
+                  "description": "A Fifty Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−450"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+290"
+                    },
+                    {
+                      "option": "Yes",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−5000"
+                    }
+                  ]
+                },
+                "Tied Match": {
+                  "description": "Tied Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−20000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Twenty20 Big Bash": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "Vitality T20 Blast": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "IPL": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "ICC T20 World Cup": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "World Cup 2027": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "The Ashes": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "County Championship": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "County Championship Two": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "Women's Premier League": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "ICC Champions Trophy": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    }
+  }
+}

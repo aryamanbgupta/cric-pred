@@ -1,0 +1,4311 @@
+{
+  "timestamp": "2024-11-28T15:38:30.609238",
+  "formats": {
+    "Test Matches": {
+      "matches": {
+        "South Africa vs Sri Lanka": {
+          "date": "Live",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "South Africa",
+                      "odds": "−20000"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Draw No Bet": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+1800"
+                    }
+                  ]
+                },
+                "Batter Runs_1": {
+                  "label": "Temba Bavuma Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 44.5",
+                      "odds": "−150"
+                    },
+                    {
+                      "option": "Under 44.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Over 49.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 49.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 54.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Under 54.5",
+                      "odds": "−160"
+                    }
+                  ]
+                },
+                "Batter Runs_2": {
+                  "label": "Tristan Stubbs Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 33.5",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Under 33.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Over 38.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 38.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 43.5",
+                      "odds": "+125"
+                    },
+                    {
+                      "option": "Under 43.5",
+                      "odds": "−170"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_1": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 1st Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+265"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−400"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_2": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 2nd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−450"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_3": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 3rd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+285"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−450"
+                    }
+                  ]
+                },
+                "Innings Runs": {
+                  "label": "South Africa Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 288.5",
+                      "odds": "−145"
+                    },
+                    {
+                      "option": "Under 288.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Over 303.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 303.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 318.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Under 318.5",
+                      "odds": "−145"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "South Africa",
+                      "odds": "−20000"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Draw No Bet": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+1800"
+                    }
+                  ]
+                }
+              }
+            },
+            "LIVE PROPS": {
+              "bet_types": {
+                "Batter Runs_1": {
+                  "label": "Temba Bavuma Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 44.5",
+                      "odds": "−150"
+                    },
+                    {
+                      "option": "Under 44.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Over 49.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 49.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 54.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Under 54.5",
+                      "odds": "−160"
+                    }
+                  ]
+                },
+                "Batter Runs_2": {
+                  "label": "Tristan Stubbs Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 33.5",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Under 33.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Over 38.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 38.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 43.5",
+                      "odds": "+125"
+                    },
+                    {
+                      "option": "Under 43.5",
+                      "odds": "−170"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_1": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 1st Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+265"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−400"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_2": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 2nd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−450"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_3": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over 3rd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+285"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−450"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "Next Over Runs_1": {
+                  "label": "South Africa Runs - 2nd Innings 41st Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−135"
+                    }
+                  ]
+                },
+                "Next Over Runs_2": {
+                  "label": "South Africa Runs - 2nd Innings 42nd Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−125"
+                    }
+                  ]
+                },
+                "Next Over Runs_3": {
+                  "label": "South Africa Runs - 2nd Innings 43rd Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−110"
+                    }
+                  ]
+                },
+                "Next Groups Over Runs_1": {
+                  "label": "South Africa Runs - 2nd Innings 1st 45 Overs",
+                  "betting_options": [
+                    {
+                      "option": "Over 147.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 147.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Next Groups Over Runs_2": {
+                  "label": "South Africa Runs - 2nd Innings 1st 50 Overs",
+                  "betting_options": [
+                    {
+                      "option": "Over 164.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 164.5",
+                      "odds": "−115"
+                    }
+                  ]
+                }
+              }
+            },
+            "INNINGS PROPS": {
+              "bet_types": {
+                "Innings Runs": {
+                  "label": "South Africa Runs - 2nd Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 288.5",
+                      "odds": "−145"
+                    },
+                    {
+                      "option": "Under 288.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Over 303.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 303.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Over 318.5",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Under 318.5",
+                      "odds": "−145"
+                    }
+                  ]
+                }
+              }
+            },
+            "WICKETS": {
+              "bet_types": {
+                "Fall of X Wicket": {
+                  "label": "South Africa Runs at Fall of Wicket - 2nd Innings 4th Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 156.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 156.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Inning Wicket_1": {
+                  "label": "South Africa Wicket - 2nd Innings 41st Over",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+750"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−2000"
+                    }
+                  ]
+                },
+                "1st Inning Wicket_2": {
+                  "label": "South Africa Wicket - 2nd Innings 42nd Over",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−2000"
+                    }
+                  ]
+                },
+                "1st Inning Wicket_3": {
+                  "label": "South Africa Wicket - 2nd Innings 43rd Over",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−1600"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "New Zealand vs England": {
+          "date": "Live",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "−150"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+140"
+                    }
+                  ]
+                },
+                "Draw No Bet": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+130"
+                    }
+                  ]
+                },
+                "Batter Runs_1": {
+                  "label": "Glenn Phillips Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 57.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 57.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Batter Runs_2": {
+                  "label": "Tim Southee Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 19.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 19.5",
+                      "odds": "−110"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_1": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 1st Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+170"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−245"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_2": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 2nd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+180"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−260"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_3": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 3rd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+180"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−260"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "+425"
+                    },
+                    {
+                      "option": "Tie",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "−650"
+                    }
+                  ]
+                },
+                "Innings Runs": {
+                  "label": "New Zealand Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 350.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 350.5",
+                      "odds": "−115"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "−150"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+140"
+                    }
+                  ]
+                },
+                "Draw No Bet": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+130"
+                    }
+                  ]
+                }
+              }
+            },
+            "LIVE PROPS": {
+              "bet_types": {
+                "Batter Runs_1": {
+                  "label": "Glenn Phillips Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 57.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 57.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Batter Runs_2": {
+                  "label": "Tim Southee Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 19.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 19.5",
+                      "odds": "−110"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_1": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 1st Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+170"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−245"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_2": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 2nd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+180"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−260"
+                    }
+                  ]
+                },
+                "Next Delivery Runs_3": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over 3rd Delivery",
+                  "betting_options": [
+                    {
+                      "option": "Over 0.5",
+                      "odds": "+180"
+                    },
+                    {
+                      "option": "Under 0.5",
+                      "odds": "−260"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "New Zealand",
+                      "odds": "+425"
+                    },
+                    {
+                      "option": "Tie",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "−650"
+                    }
+                  ]
+                },
+                "Next Over Runs_1": {
+                  "label": "New Zealand Runs - 1st Innings 84th Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 3.5",
+                      "odds": "−105"
+                    },
+                    {
+                      "option": "Under 3.5",
+                      "odds": "−130"
+                    }
+                  ]
+                },
+                "Next Over Runs_2": {
+                  "label": "New Zealand Runs - 1st Innings 85th Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 3.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 3.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Next Over Runs_3": {
+                  "label": "New Zealand Runs - 1st Innings 86th Over",
+                  "betting_options": [
+                    {
+                      "option": "Over 3.5",
+                      "odds": "−130"
+                    },
+                    {
+                      "option": "Under 3.5",
+                      "odds": "−105"
+                    }
+                  ]
+                }
+              }
+            },
+            "INNINGS PROPS": {
+              "bet_types": {
+                "Innings Runs": {
+                  "label": "New Zealand Runs - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "Over 350.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 350.5",
+                      "odds": "−115"
+                    }
+                  ]
+                }
+              }
+            },
+            "WICKETS": {
+              "bet_types": {
+                "Fall of X Wicket": {
+                  "label": "New Zealand Runs at Fall of Wicket - 1st Innings 9th Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 338.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 338.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Inning Wicket": {
+                  "label": "New Zealand Wicket - 1st Innings 85th Over",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+425"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−700"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "West Indies\nvs\nBangladesh": {
+          "date": "SAT 30TH NOV 10:00AM",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−205"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+475"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+350"
+                    }
+                  ]
+                },
+                "Moneyline (2-Way)": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−400"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+300"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+175"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 22.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 22.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−155"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−155"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−205"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+475"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+350"
+                    }
+                  ]
+                },
+                "Moneyline (2-Way)": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−400"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+300"
+                    }
+                  ]
+                },
+                "Double Chance": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies or Bangladesh",
+                      "odds": "−750"
+                    },
+                    {
+                      "option": "West Indies or Draw",
+                      "odds": "−500"
+                    },
+                    {
+                      "option": "Bangladesh or Draw",
+                      "odds": "+150"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Innings Batter_1": {
+                  "label": "Bangladesh Top Batter - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "LK Das",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "Najmul Hossain Shanto",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "M Haque",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "Jaker Ali",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Shadman Islam",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "Zakir Hasan",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "M Hasan Joy",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "Shahadat Hossain",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "Mehidy Hasan Miraz",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "MI Ankon",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "Taijul Islam",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "H Mahmud",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Taskin Ahmed",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "H Murad",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "Shoriful Islam",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "N Rana",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Innings Batter_2": {
+                  "label": "West Indies Top Batter - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "KC Brathwaite",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "TA Imlach",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "A Athanaze",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "M Louis",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "K Hodge",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "JP Greaves",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "KU Carty",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "K Sinclair",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "J Da Silva",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "AS Joseph",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "KAJ Roach",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "J Warrican",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "S Joseph",
+                      "odds": "+6500"
+                    },
+                    {
+                      "option": "A Phillip",
+                      "odds": "+6500"
+                    },
+                    {
+                      "option": "JNT Seales",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Innings Bowler_1": {
+                  "label": "Bangladesh Top Bowler - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "H Mahmud",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "Taijul Islam",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "Taskin Ahmed",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "H Murad",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "N Rana",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Shoriful Islam",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "Mehidy Hasan Miraz",
+                      "odds": "+350"
+                    }
+                  ]
+                },
+                "Innings Bowler_2": {
+                  "label": "West Indies Top Bowler - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "KAJ Roach",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "JNT Seales",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "AS Joseph",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "S Joseph",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "J Warrican",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "K Sinclair",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "A Phillip",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "KC Brathwaite",
+                      "odds": "+2000"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+175"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 22.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 22.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "+110"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−155"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+115"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−155"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest 1st Innings Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−175"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+135"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "+290"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−185"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+370"
+                    }
+                  ]
+                },
+                "X Score in Match": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−330"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+220"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_1": {
+                  "label": "Most Match Fours",
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−525"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+370"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_2": {
+                  "label": "Most Match Sixes",
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−160"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+210"
+                    }
+                  ]
+                }
+              }
+            },
+            "INNINGS PROPS": {
+              "bet_types": {
+                "1st Innings Lead": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "West Indies",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Tie",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+175"
+                    }
+                  ]
+                },
+                "Hundred to Be Scored in 1st Innings": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+160"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−230"
+                    }
+                  ]
+                },
+                "Fifty to Be Scored in 1st Innings": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−1000"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+500"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "Australia\nvs\nIndia": {
+          "date": "THU 5TH DEC 11:00PM",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−140"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+155"
+                    }
+                  ]
+                },
+                "Moneyline (2-Way)": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+130"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 135.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 135.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Player Totals_1": {
+                  "label": "JJ Bumrah 1st Innings Total Wickets",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "+110"
+                    }
+                  ]
+                },
+                "Player Totals_2": {
+                  "label": "M Siraj 1st Innings Total Wickets",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+120"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−165"
+                    }
+                  ]
+                },
+                "Player Totals_3": {
+                  "label": "MA Starc 1st Innings Total Wickets",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Player Totals_4": {
+                  "label": "PJ Cummins 1st Innings Total Wickets",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−125"
+                    }
+                  ]
+                },
+                "Player Totals_5": {
+                  "label": "SPD Smith 1st Innings Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 34.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 34.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Player Totals_6": {
+                  "label": "TM Head 1st Innings Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 31.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 31.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Player Totals_7": {
+                  "label": "V Kohli 1st Innings Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 31.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 31.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Player Totals_8": {
+                  "label": "Y Jaiswal 1st Innings Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 31.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 31.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−235"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 28.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 28.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "+125"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−175"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−140"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−140"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+155"
+                    }
+                  ]
+                },
+                "Moneyline (2-Way)": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+130"
+                    }
+                  ]
+                },
+                "Double Chance": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia or India",
+                      "odds": "−2500"
+                    },
+                    {
+                      "option": "Australia or Draw",
+                      "odds": "−225"
+                    },
+                    {
+                      "option": "India or Draw",
+                      "odds": "+100"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 135.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 135.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Innings Batter_1": {
+                  "label": "Australia Top Batter - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "SPD Smith",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "TM Head",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "M Labuschagne",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "UT Khawaja",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "MR Marsh",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "JP Inglis",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "BJ Webster",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "NA McSweeney",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "A Carey",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "PJ Cummins",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "MA Starc",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "NM Lyon",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "SM Boland",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "JR Hazlewood",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Innings Batter_2": {
+                  "label": "India Top Batter - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "V Kohli",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Y Jaiswal",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "SS Gill",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "RG Sharma",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "KL Rahul",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "RR Pant",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "S Khan",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "D Padikkal",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "AR Easwaran",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "D Jurel",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "RA Jadeja",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "Ntish Reddy",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "W Sundar",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "R Ashwin",
+                      "odds": "+3500"
+                    },
+                    {
+                      "option": "HP Rana",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "JJ Bumrah",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "A Deep",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "Prasidh Krishna",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "M Siraj",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Innings Bowler_1": {
+                  "label": "Australia Top Bowler - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "PJ Cummins",
+                      "odds": "+225"
+                    },
+                    {
+                      "option": "MA Starc",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "JR Hazlewood",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "NM Lyon",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "SM Boland",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "BJ Webster",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "MR Marsh",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "TM Head",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "M Labuschagne",
+                      "odds": "+1600"
+                    }
+                  ]
+                },
+                "Innings Bowler_2": {
+                  "label": "India Top Bowler - 1st Innings",
+                  "betting_options": [
+                    {
+                      "option": "JJ Bumrah",
+                      "odds": "+135"
+                    },
+                    {
+                      "option": "M Siraj",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "Prasidh Krishna",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "HP Rana",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "R Ashwin",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "A Deep",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "RA Jadeja",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "W Sundar",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Ntish Reddy",
+                      "odds": "+500"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−235"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 28.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 28.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "+125"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−175"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 2.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 2.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest 1st Innings Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "+120"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "−155"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "+270"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−150"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+310"
+                    }
+                  ]
+                },
+                "X Score in Match": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−700"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+400"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_1": {
+                  "label": "Most Match Fours",
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−140"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1500"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+105"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_2": {
+                  "label": "Most Match Sixes",
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "+125"
+                    }
+                  ]
+                }
+              }
+            },
+            "INNINGS PROPS": {
+              "bet_types": {
+                "1st Innings Lead": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Tie",
+                      "odds": "+8000"
+                    },
+                    {
+                      "option": "India",
+                      "odds": "−110"
+                    }
+                  ]
+                },
+                "Hundred to Be Scored in 1st Innings": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−110"
+                    }
+                  ]
+                },
+                "Fifty to Be Scored in 1st Innings": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−5000"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+950"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Global Super League": {
+      "matches": {
+        "Guyana Amazon Warriors vs Victoria": {
+          "date": "Live",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "−475"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+290"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 54.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 54.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Top Bowler_1": {
+                  "label": "Guyana Amazon Warriors Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "I Tahir",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "G Motie",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Tanzim Hasan Sakib",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "D Pretorius",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "R Shepherd",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "SK Springer",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "MM Ali",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Hasan Khan",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "RL Chase",
+                      "odds": "+850"
+                    },
+                    {
+                      "option": "KMA Paul",
+                      "odds": "+1400"
+                    },
+                    {
+                      "option": "M Deyal",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Top Bowler_2": {
+                  "label": "Victoria Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "C Le Roux",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "D Moody",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "C Stowe",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "J Drysdale",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "M Birthesal",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "K Gore",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "CJ Anderson",
+                      "odds": "+500"
+                    }
+                  ]
+                },
+                "Top Batter_1": {
+                  "label": "Guyana Amazon Warriors Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "SD Hope",
+                      "odds": "+240"
+                    },
+                    {
+                      "option": "MM Ali",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "SO Hetmyer",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "M Deyal",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "RL Chase",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "K Anderson",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "KMA Paul",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "D Pretorius",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "SK Springer",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "R Shepherd",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Hassan Khan",
+                      "odds": "+3500"
+                    },
+                    {
+                      "option": "Tanzim Hasan Sakib",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "G Motie",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "I Tahir",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Top Batter_2": {
+                  "label": "Victoria Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "J Clark",
+                      "odds": "+225"
+                    },
+                    {
+                      "option": "JW Wells",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "S Krishnamurthi",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "SA Edwards",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "BD Macdonald",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "CJ Anderson",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "JN Hamilton",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "K Gore",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "C Le Roux",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "M Birthesal",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "D Moody",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "J Drysdale",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "C Stowe",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−200"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−200"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+150"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 17.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 17.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "−475"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+290"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 54.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 54.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Top Bowler_1": {
+                  "label": "Guyana Amazon Warriors Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "I Tahir",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "G Motie",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Tanzim Hasan Sakib",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "D Pretorius",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "R Shepherd",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "SK Springer",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "MM Ali",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Hasan Khan",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "RL Chase",
+                      "odds": "+850"
+                    },
+                    {
+                      "option": "KMA Paul",
+                      "odds": "+1400"
+                    },
+                    {
+                      "option": "M Deyal",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Top Bowler_2": {
+                  "label": "Victoria Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "C Le Roux",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "D Moody",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "C Stowe",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "J Drysdale",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "M Birthesal",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "K Gore",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "CJ Anderson",
+                      "odds": "+500"
+                    }
+                  ]
+                },
+                "Top Batter_1": {
+                  "label": "Guyana Amazon Warriors Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "SD Hope",
+                      "odds": "+240"
+                    },
+                    {
+                      "option": "MM Ali",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "SO Hetmyer",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "M Deyal",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "RL Chase",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "K Anderson",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "KMA Paul",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "D Pretorius",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "SK Springer",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "R Shepherd",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Hassan Khan",
+                      "odds": "+3500"
+                    },
+                    {
+                      "option": "Tanzim Hasan Sakib",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "G Motie",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "I Tahir",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Top Batter_2": {
+                  "label": "Victoria Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "J Clark",
+                      "odds": "+225"
+                    },
+                    {
+                      "option": "JW Wells",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "S Krishnamurthi",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "SA Edwards",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "BD Macdonald",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "CJ Anderson",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "JN Hamilton",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "K Gore",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "C Le Roux",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "M Birthesal",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "D Moody",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "J Drysdale",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "C Stowe",
+                      "odds": "+10000"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−200"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−200"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+150"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 17.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 17.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+100"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "+255"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+370"
+                    }
+                  ]
+                },
+                "X Score in Match_1": {
+                  "label": "A Fifty Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−225"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+150"
+                    }
+                  ]
+                },
+                "X Score in Match_2": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−10000"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_1": {
+                  "label": "Most Match Fours",
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+850"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+155"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_2": {
+                  "label": "Most Match Sixes",
+                  "betting_options": [
+                    {
+                      "option": "Guyana Amazon Warriors",
+                      "odds": "−245"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "Victoria",
+                      "odds": "+285"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ICC T20 World Cup": {
+      "matches": {
+        "ICC T20 World Cup 2026": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "India",
+                      "odds": "+150"
+                    },
+                    {
+                      "option": "Australia",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "South Africa",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "Pakistan",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "West Indies",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "New Zealand",
+                      "odds": "+1400"
+                    },
+                    {
+                      "option": "Afghanistan",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+12000"
+                    },
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+20000"
+                    },
+                    {
+                      "option": "USA",
+                      "odds": "+20000"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+20000"
+                    },
+                    {
+                      "option": "UAE",
+                      "odds": "+40000"
+                    },
+                    {
+                      "option": "Scotland",
+                      "odds": "+50000"
+                    },
+                    {
+                      "option": "Netherlands",
+                      "odds": "+70000"
+                    },
+                    {
+                      "option": "Uganda",
+                      "odds": "+100000"
+                    },
+                    {
+                      "option": "Namibia",
+                      "odds": "+150000"
+                    },
+                    {
+                      "option": "Oman",
+                      "odds": "+200000"
+                    },
+                    {
+                      "option": "Canada",
+                      "odds": "+200000"
+                    },
+                    {
+                      "option": "Nepal",
+                      "odds": "+250000"
+                    },
+                    {
+                      "option": "Papua New Guinea",
+                      "odds": "+400000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "IPL": {
+      "matches": {
+        "Indian Premier League 2025": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Mumbai Indians",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Chennai Super Kings",
+                      "odds": "+550"
+                    },
+                    {
+                      "option": "Kolkata Knight Riders",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "Royal Challengers Bengaluru",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "Sunrisers Hyderabad",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "Rajasthan Royals",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "Lucknow Super Giants",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "Gujarat Titans",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "Delhi Capitals",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "Punjab Kings",
+                      "odds": "+1000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "One Day Internationals (W)": {
+      "matches": {
+        "Bangladesh [W]\nvs\nIreland [W]": {
+          "date": "TOMORROW 11:00PM",
+          "betting_categories": {
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Bangladesh [W]",
+                      "odds": "−425"
+                    },
+                    {
+                      "option": "Ireland [W]",
+                      "odds": "+265"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "The Ashes": {
+      "matches": {
+        "The Ashes 2025/26": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Australia",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+260"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+450"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Twenty20 Big Bash": {
+      "matches": {
+        "Twenty20 Big Bash 2024/25": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Sydney Sixers",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "Perth Scorchers",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "Brisbane Heat",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Hobart Hurricanes",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "Sydney Thunder",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "Adelaide Strikers",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "Melbourne Stars",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "Melbourne Renegades",
+                      "odds": "+1000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Twenty20 Big Bash (W)": {
+      "matches": {
+        "Brisbane Heat [W] vs Sydney Thunder [W]": {
+          "date": "Live",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+125"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+175"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 20.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 20.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 5.5",
+                      "odds": "−135"
+                    },
+                    {
+                      "option": "Under 5.5",
+                      "odds": "+100"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+100"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−165"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+125"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−250"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+175"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 20.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 20.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 5.5",
+                      "odds": "−135"
+                    },
+                    {
+                      "option": "Under 5.5",
+                      "odds": "+100"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+100"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "+260"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+295"
+                    }
+                  ]
+                },
+                "X Score in Match_1": {
+                  "label": "A Fifty Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−575"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+340"
+                    }
+                  ]
+                },
+                "X Score in Match_2": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−5000"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_1": {
+                  "label": "Most Match Fours",
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+115"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_2": {
+                  "label": "Most Match Sixes",
+                  "betting_options": [
+                    {
+                      "option": "Brisbane Heat [W]",
+                      "odds": "−105"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+425"
+                    },
+                    {
+                      "option": "Sydney Thunder [W]",
+                      "odds": "+160"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Twenty20 International (W)": {
+      "matches": {
+        "South Africa [W]\nvs\nEngland [W]": {
+          "date": "SAT 30TH NOV 11:00AM",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+320"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "−525"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Top Bowler_1": {
+                  "label": "England [W] Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "S Ecclestone",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "S Glenn",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "C Dean",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LK Bell",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LCN Smith",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "NR Sciver-Brunt",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "L Filer",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "F Kemp",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "S Dunkley",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "HC Knight",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Top Bowler_2": {
+                  "label": "South Africa [W] Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "N Mlaba",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "N de Klerk",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Eliz-Mari Marx",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "TS Sekhukhune",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "A Hlubi",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "N Shangase",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "CL Tryon",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "A Dercksen",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "S Luus",
+                      "odds": "+700"
+                    }
+                  ]
+                },
+                "Top Batter_1": {
+                  "label": "England [W] Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "DN Wyatt-Hodge",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "NR Sciver-Brunt",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "ME Bouchier",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "HC Knight",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "S Dunkley",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "PJ Scholfield",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "Seren Smale",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "AE Jones",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "F Kemp",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "S Ecclestone",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "C Dean",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "S Glenn",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "LCN Smith",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "LK Bell",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "L Filer",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Top Batter_2": {
+                  "label": "South Africa [W] Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "L Wolfvaardt",
+                      "odds": "+210"
+                    },
+                    {
+                      "option": "T Brits",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "A Bosch",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "F Tunnicliffe",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "A Dercksen",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "S Luus",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "CL Tryon",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "N Shangase",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "N de Klerk",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "S Jafta",
+                      "odds": "+3000"
+                    },
+                    {
+                      "option": "Eliz-Mari Marx",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "TS Sekhukhune",
+                      "odds": "+8000"
+                    },
+                    {
+                      "option": "A Hlubi",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "N Mlaba",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−190"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−190"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+135"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 22.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 22.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 5.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 5.5",
+                      "odds": "−130"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+320"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "−525"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "Top Bowler_1": {
+                  "label": "England [W] Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "S Ecclestone",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "S Glenn",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "C Dean",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LK Bell",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LCN Smith",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "NR Sciver-Brunt",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "L Filer",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "F Kemp",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "S Dunkley",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "HC Knight",
+                      "odds": "+2000"
+                    }
+                  ]
+                },
+                "Top Bowler_2": {
+                  "label": "South Africa [W] Top Bowler",
+                  "betting_options": [
+                    {
+                      "option": "N Mlaba",
+                      "odds": "+300"
+                    },
+                    {
+                      "option": "N de Klerk",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "Eliz-Mari Marx",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "TS Sekhukhune",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "A Hlubi",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "N Shangase",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "CL Tryon",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "A Dercksen",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "S Luus",
+                      "odds": "+700"
+                    }
+                  ]
+                },
+                "Top Batter_1": {
+                  "label": "England [W] Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "DN Wyatt-Hodge",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "NR Sciver-Brunt",
+                      "odds": "+275"
+                    },
+                    {
+                      "option": "ME Bouchier",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "HC Knight",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "S Dunkley",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "PJ Scholfield",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "Seren Smale",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "AE Jones",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "F Kemp",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "S Ecclestone",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "C Dean",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "S Glenn",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "LCN Smith",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "LK Bell",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "L Filer",
+                      "odds": "+10000"
+                    }
+                  ]
+                },
+                "Top Batter_2": {
+                  "label": "South Africa [W] Top Batter",
+                  "betting_options": [
+                    {
+                      "option": "L Wolfvaardt",
+                      "odds": "+210"
+                    },
+                    {
+                      "option": "T Brits",
+                      "odds": "+330"
+                    },
+                    {
+                      "option": "A Bosch",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "F Tunnicliffe",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "A Dercksen",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "S Luus",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "CL Tryon",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "N Shangase",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "N de Klerk",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "S Jafta",
+                      "odds": "+3000"
+                    },
+                    {
+                      "option": "Eliz-Mari Marx",
+                      "odds": "+5000"
+                    },
+                    {
+                      "option": "TS Sekhukhune",
+                      "odds": "+8000"
+                    },
+                    {
+                      "option": "A Hlubi",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "N Mlaba",
+                      "odds": "+10000"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−190"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−190"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+135"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 22.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 22.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 5.5",
+                      "odds": "−110"
+                    },
+                    {
+                      "option": "Under 5.5",
+                      "odds": "−130"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "−125"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+290"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "+190"
+                    }
+                  ]
+                },
+                "X Score in Match_1": {
+                  "label": "A Fifty Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−425"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+255"
+                    }
+                  ]
+                },
+                "X Score in Match_2": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−1800"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_1": {
+                  "label": "Most Match Fours",
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+1200"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "−280"
+                    }
+                  ]
+                },
+                "Match Fours/Sixes_2": {
+                  "label": "Most Match Sixes",
+                  "betting_options": [
+                    {
+                      "option": "South Africa [W]",
+                      "odds": "+185"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+320"
+                    },
+                    {
+                      "option": "England [W]",
+                      "odds": "+100"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "World Cup 2027": {
+      "matches": {
+        "World Cup 2027": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "India",
+                      "odds": "+200"
+                    },
+                    {
+                      "option": "Australia",
+                      "odds": "+350"
+                    },
+                    {
+                      "option": "South Africa",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "England",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "New Zealand",
+                      "odds": "+750"
+                    },
+                    {
+                      "option": "Pakistan",
+                      "odds": "+1000"
+                    },
+                    {
+                      "option": "West Indies",
+                      "odds": "+1100"
+                    },
+                    {
+                      "option": "Sri Lanka",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "Afghanistan",
+                      "odds": "+3000"
+                    },
+                    {
+                      "option": "Bangladesh",
+                      "odds": "+4000"
+                    },
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+10000"
+                    },
+                    {
+                      "option": "USA",
+                      "odds": "+50000"
+                    },
+                    {
+                      "option": "Netherlands",
+                      "odds": "+50000"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+50000"
+                    },
+                    {
+                      "option": "UAE",
+                      "odds": "+100000"
+                    },
+                    {
+                      "option": "Scotland",
+                      "odds": "+100000"
+                    },
+                    {
+                      "option": "Oman",
+                      "odds": "+100000"
+                    },
+                    {
+                      "option": "Nepal",
+                      "odds": "+100000"
+                    },
+                    {
+                      "option": "Namibia",
+                      "odds": "+100000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

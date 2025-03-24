@@ -1,0 +1,695 @@
+{
+  "timestamp": "2025-02-24T19:27:48.332041",
+  "formats": {
+    "Twenty20 International": {
+      "matches": {
+        "Zimbabwe\nvs\nIreland": {
+          "date": "TOMORROW 11:30AM",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "−130"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+105"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 18.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 18.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "−125"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "−130"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+105"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 60.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 60.5",
+                      "odds": "−120"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH PROPS": {
+              "bet_types": {
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+370"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−230"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+160"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 18.5",
+                      "odds": "−115"
+                    },
+                    {
+                      "option": "Under 18.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 6.5",
+                      "odds": "+105"
+                    },
+                    {
+                      "option": "Under 6.5",
+                      "odds": "−140"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "−125"
+                    }
+                  ]
+                },
+                "Most Run Outs": {
+                  "label": "Most Run Outs",
+                  "betting_options": [
+                    {
+                      "option": "Zimbabwe",
+                      "odds": "+295"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "−155"
+                    },
+                    {
+                      "option": "Ireland",
+                      "odds": "+295"
+                    }
+                  ]
+                },
+                "X Score in Match_1": {
+                  "label": "A Fifty Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "−450"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "+290"
+                    }
+                  ]
+                },
+                "X Score in Match_2": {
+                  "label": "A Hundred Score In Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−5000"
+                    }
+                  ]
+                },
+                "Tied Match": {
+                  "label": "Tied Match",
+                  "betting_options": [
+                    {
+                      "option": "Yes",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "No",
+                      "odds": "−20000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Twenty20 Big Bash": {
+      "matches": {
+        "Twenty20 Big Bash 2025/26": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Hobart Hurricanes",
+                      "odds": "+400"
+                    },
+                    {
+                      "option": "Perth Scorchers",
+                      "odds": "+450"
+                    },
+                    {
+                      "option": "Sydney Sixers",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Brisbane Heat",
+                      "odds": "+600"
+                    },
+                    {
+                      "option": "Sydney Thunder",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "Adelaide Strikers",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "Melbourne Stars",
+                      "odds": "+800"
+                    },
+                    {
+                      "option": "Melbourne Renegades",
+                      "odds": "+1000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Vitality T20 Blast": {
+      "matches": {
+        "Vitality T20 Blast 2025": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {
+                "Winner": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Surrey",
+                      "odds": "+500"
+                    },
+                    {
+                      "option": "Somerset",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "Birmingham Bears",
+                      "odds": "+650"
+                    },
+                    {
+                      "option": "Nottinghamshire",
+                      "odds": "+750"
+                    },
+                    {
+                      "option": "Lancashire",
+                      "odds": "+750"
+                    },
+                    {
+                      "option": "Gloucestershire",
+                      "odds": "+900"
+                    },
+                    {
+                      "option": "Yorkshire",
+                      "odds": "+1300"
+                    },
+                    {
+                      "option": "Sussex",
+                      "odds": "+1300"
+                    },
+                    {
+                      "option": "Hampshire",
+                      "odds": "+1300"
+                    },
+                    {
+                      "option": "Northamptonshire",
+                      "odds": "+1500"
+                    },
+                    {
+                      "option": "Essex",
+                      "odds": "+1500"
+                    },
+                    {
+                      "option": "Worcestershire",
+                      "odds": "+1700"
+                    },
+                    {
+                      "option": "Kent",
+                      "odds": "+2000"
+                    },
+                    {
+                      "option": "Middlesex",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Leicestershire",
+                      "odds": "+2500"
+                    },
+                    {
+                      "option": "Glamorgan",
+                      "odds": "+3000"
+                    },
+                    {
+                      "option": "Durham",
+                      "odds": "+3000"
+                    },
+                    {
+                      "option": "Derbyshire",
+                      "odds": "+5000"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "IPL": {
+      "matches": {
+        "Indian Premier League 2025": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {}
+            }
+          }
+        }
+      }
+    },
+    "ICC T20 World Cup": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "World Cup 2027": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "The Ashes": {
+      "matches": {
+        "The Ashes 2025/26": {
+          "date": "Live",
+          "betting_categories": {
+            "FUTURES": {
+              "bet_types": {}
+            }
+          }
+        }
+      }
+    },
+    "County Championship": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "County Championship Two": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    },
+    "Women's Premier League": {
+      "matches": {
+        "Delhi Capitals [W] vs Gujarat Giants [W]": {
+          "date": "Live",
+          "betting_categories": {
+            "POPULAR": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Delhi Capitals [W]",
+                      "odds": "−170"
+                    },
+                    {
+                      "option": "Gujarat Giants [W]",
+                      "odds": "+120"
+                    }
+                  ]
+                },
+                "Highest Score": {
+                  "label": "Highest Individual Score",
+                  "betting_options": [
+                    {
+                      "option": "Over 67.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 67.5",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Wicket_1": {
+                  "label": "1st Wicket Method",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−175"
+                    },
+                    {
+                      "option": "Bowled",
+                      "odds": "+250"
+                    },
+                    {
+                      "option": "LBW",
+                      "odds": "+700"
+                    },
+                    {
+                      "option": "Run Out",
+                      "odds": "+1600"
+                    },
+                    {
+                      "option": "Stumped",
+                      "odds": "+2200"
+                    },
+                    {
+                      "option": "Any Other Method",
+                      "odds": "+20000"
+                    }
+                  ]
+                },
+                "1st Wicket_2": {
+                  "label": "1st Wicket Method (2 Way)",
+                  "betting_options": [
+                    {
+                      "option": "Caught",
+                      "odds": "−180"
+                    },
+                    {
+                      "option": "Not Caught",
+                      "odds": "+125"
+                    }
+                  ]
+                },
+                "1st Wicket_3": {
+                  "label": "Fall Of 1st Wicket",
+                  "betting_options": [
+                    {
+                      "option": "Over 23.5",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Under 23.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "1st Over_1": {
+                  "label": "1st Over Runs Odd/Even",
+                  "betting_options": [
+                    {
+                      "option": "Odd",
+                      "odds": "−120"
+                    },
+                    {
+                      "option": "Even",
+                      "odds": "−120"
+                    }
+                  ]
+                },
+                "1st Over_2": {
+                  "label": "1st Over Total Runs",
+                  "betting_options": [
+                    {
+                      "option": "Over 5.5",
+                      "odds": "−125"
+                    },
+                    {
+                      "option": "Under 5.5",
+                      "odds": "−115"
+                    }
+                  ]
+                },
+                "Highest Opening Partnership": {
+                  "label": "Highest Opening Partnership",
+                  "betting_options": [
+                    {
+                      "option": "Delhi Capitals [W]",
+                      "odds": "+100"
+                    },
+                    {
+                      "option": "Draw",
+                      "odds": "+2800"
+                    },
+                    {
+                      "option": "Gujarat Giants [W]",
+                      "odds": "−125"
+                    }
+                  ]
+                }
+              }
+            },
+            "MATCH LINES": {
+              "bet_types": {
+                "Moneyline": {
+                  "label": null,
+                  "betting_options": [
+                    {
+                      "option": "Delhi Capitals [W]",
+                      "odds": "−170"
+                    },
+                    {
+                      "option": "Gujarat Giants [W]",
+                      "odds": "+120"
+                    }
+                  ]
+                }
+              }
+            },
+            "PLAYER PROPS": {
+              "bet_types": {}
+            }
+          }
+        }
+      }
+    },
+    "ICC Champions Trophy": {
+      "matches": {
+        "": {
+          "date": "Live",
+          "betting_categories": {}
+        }
+      }
+    }
+  }
+}
